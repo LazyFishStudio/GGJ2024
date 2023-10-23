@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: e8a3d48233b7bfc48abe0c394049bc7e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - JiangChengYuanTi
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 173c72a7a5805a74b8ea81318cd9abc6, type: 3}
+  - {fileID: 12800000, guid: c490aadbf9d8d82449481631b9881995, type: 3}
+  - {fileID: 12800000, guid: f5297cc01cd6bc942af15e074605c8f4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
