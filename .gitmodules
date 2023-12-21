@@ -3,7 +3,7 @@
 	url = https://gitee.com/pcdstudio/PCDModules.git
 [submodule "Assets/PCDUtils"]
 	path = Assets/PCDUtils
-	url = https://github.com/PCDGameStudio/PCDUtils.git
+	url = https://gitee.com/pcdstudio/PCDUtils.git
 [submodule "Assets/PCDAssets"]
 	path = Assets/PCDAssets
 	url = https://github.com/PCDGameStudio/PCDAssets.git
