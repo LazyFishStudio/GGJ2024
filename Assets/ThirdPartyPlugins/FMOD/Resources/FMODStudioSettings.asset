@@ -551,8 +551,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/LocalExternalPackage/SamoozGeneralAssets/SamoozFMODProject/SamoozFMODProject.fspro
-  sourceBankPath: Assets/LocalExternalPackage/SamoozGeneralAssets/SamoozFMODProject/Build
+  sourceProjectPath: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/SamoozFMODProject.fspro
+  sourceBankPath: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 1
   ShowBankRefreshWindow: 0
@@ -578,6 +578,7 @@ MonoBehaviour:
   Banks:
   - BGM
   - Impact
+  - Shot
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
@@ -593,17 +594,17 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131607
   Platforms:
-  - {fileID: -1994095734535239460}
-  - {fileID: 8816757521083045860}
-  - {fileID: -120147115496718762}
-  - {fileID: 6758594328918924376}
-  - {fileID: -3928580125004444105}
-  - {fileID: 3765662945209557098}
-  - {fileID: -4081653411294669909}
-  - {fileID: -3832690107254726492}
   - {fileID: -7491259442082869762}
-  - {fileID: -990186679352344500}
   - {fileID: -4935552581943019712}
+  - {fileID: -4081653411294669909}
+  - {fileID: -3928580125004444105}
+  - {fileID: -3832690107254726492}
+  - {fileID: -1994095734535239460}
+  - {fileID: -990186679352344500}
+  - {fileID: -120147115496718762}
+  - {fileID: 3765662945209557098}
+  - {fileID: 6758594328918924376}
+  - {fileID: 8816757521083045860}
   MigratedPlatforms: 0500000012000000060000000b000000080000000a000000090000000c000000150000000200000001000000
 --- !u!114 &3765662945209557098
 MonoBehaviour:
@@ -803,15 +804,15 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
-  - 46fbfdf3fc43db0458918377fd40293e
-  - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - 52eb9df5db46521439908db3a29a1bbb
-  - b7716510a1f36934c87976f3a81dbf3d
-  - 2c5177b11d81d824dbb064f9ac8527da
-  - 0f8eb3f400726694eb47beb1a9f94ce8
   - c88d16e5272a4e241b0ef0ac2e53b73d
-  - e7a046c753c3c3d4aacc91f6597f310d
   - fd7c55dab0fce234b8c25f6ffca523c1
+  - 2c5177b11d81d824dbb064f9ac8527da
+  - 52eb9df5db46521439908db3a29a1bbb
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - 46fbfdf3fc43db0458918377fd40293e
+  - b7716510a1f36934c87976f3a81dbf3d
+  - 2fea114e74ecf3c4f920e1d5cc1c4c40
   codecChannels:
     Value: []
     HasValue: 0

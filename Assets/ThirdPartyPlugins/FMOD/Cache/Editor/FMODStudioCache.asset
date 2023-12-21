@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7443708612885279993
+--- !u!114 &-7804627479228492407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,17 +9,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/impact_ball_hit
   m_EditorClassIdentifier: 
-  Path: Assets/LocalExternalPackage/SamoozGeneralAssets/SamoozFMODProject/Build/Desktop/BGM.bank
-  Name: BGM
-  StudioPath: bank:/BGM
-  lastModified: 638332849563512299
-  FileSizes:
-  - Name: Desktop
-    Value: 2328992
-  Exists: 1
+  Path: event:/impact_ball_hit
+  Guid:
+    Data1: -1655386461
+    Data2: 1238712665
+    Data3: -38865268
+    Data4: -2111438635
+  Banks:
+  - {fileID: 5298852119292625546}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
 --- !u!114 &-6975981735973882995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,14 +46,14 @@ MonoBehaviour:
     Data3: -703704154
     Data4: -1594187183
   Banks:
-  - {fileID: 963412954756856585}
+  - {fileID: 5298852119292625546}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
   - {fileID: 5419614790362868061}
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
 --- !u!114 &-6932926055670287314
 MonoBehaviour:
@@ -67,14 +74,34 @@ MonoBehaviour:
     Data3: -912444482
     Data4: -840251766
   Banks:
-  - {fileID: -7443708612885279993}
+  - {fileID: -796590778810704839}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
-  MaxDistance: 10000
+  MaxDistance: 60
   Length: 0
+--- !u!114 &-6231639127751259369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/FootStep.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/FootStep.strings.bank
+  Name: FootStep.strings
+  StudioPath: bank:/FootStep.strings
+  lastModified: 638387025842164580
+  FileSizes:
+  - Name: Desktop
+    Value: 1702
+  Exists: 1
 --- !u!114 &-4905229405337286384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,13 +121,13 @@ MonoBehaviour:
     Data3: 1346977925
     Data4: -1366469989
   Banks:
-  - {fileID: 963412954756856585}
+  - {fileID: 5298852119292625546}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
 --- !u!114 &-4653965150432119151
 MonoBehaviour:
@@ -121,13 +148,40 @@ MonoBehaviour:
     Data3: -938220136
     Data4: -2146056851
   Banks:
-  - {fileID: 963412954756856585}
+  - {fileID: 5298852119292625546}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-4038675305520457601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/fish_jump
+  m_EditorClassIdentifier: 
+  Path: event:/fish_jump
+  Guid:
+    Data1: -954679619
+    Data2: 1080987688
+    Data3: -1135669331
+    Data4: -1642527609
+  Banks:
+  - {fileID: 5298852119292625546}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
   Length: 0
 --- !u!114 &-4034078685164182064
 MonoBehaviour:
@@ -148,14 +202,81 @@ MonoBehaviour:
     Data3: 890848178
     Data4: -816307400
   Banks:
-  - {fileID: 1588765420540717800}
+  - {fileID: -2544210241545578906}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 513
+--- !u!114 &-3769266065153186098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/impact_get_money
+  m_EditorClassIdentifier: 
+  Path: event:/impact_get_money
+  Guid:
+    Data1: -248032979
+    Data2: 1126957402
+    Data3: 1093132948
+    Data4: 1441968710
+  Banks:
+  - {fileID: 5298852119292625546}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-2544210241545578906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/FootStep.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/FootStep.bank
+  Name: FootStep
+  StudioPath: bank:/FootStep
+  lastModified: 638387025842148086
+  FileSizes:
+  - Name: Desktop
+    Value: 159552
+  Exists: 1
+--- !u!114 &-796590778810704839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM
+  lastModified: 638387025842117979
+  FileSizes:
+  - Name: Desktop
+    Value: 2398720
+  Exists: 1
 --- !u!114 &-352445807062189971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,13 +296,40 @@ MonoBehaviour:
     Data3: -662586437
     Data4: 1397651868
   Banks:
-  - {fileID: -7443708612885279993}
+  - {fileID: -796590778810704839}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &-83235635002180759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/shot_tui
+  m_EditorClassIdentifier: 
+  Path: event:/shot_tui
+  Guid:
+    Data1: -195055364
+    Data2: 1118448689
+    Data3: 1567988918
+    Data4: -2011548493
+  Banks:
+  - {fileID: 1506409772935752460}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
   Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -196,10 +344,11 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 5930297516883445073}
-  - {fileID: -7443708612885279993}
-  - {fileID: 1588765420540717800}
-  - {fileID: 963412954756856585}
+  - {fileID: -6231639127751259369}
+  - {fileID: -796590778810704839}
+  - {fileID: -2544210241545578906}
+  - {fileID: 5298852119292625546}
+  - {fileID: 1506409772935752460}
   EditorEvents:
   - {fileID: -4034078685164182064}
   - {fileID: -6975981735973882995}
@@ -210,14 +359,50 @@ MonoBehaviour:
   - {fileID: 3878185505168113089}
   - {fileID: -352445807062189971}
   - {fileID: -6932926055670287314}
+  - {fileID: 2095348859818517041}
+  - {fileID: 2024099637015875995}
+  - {fileID: 2922851094386954624}
+  - {fileID: 718491770015277607}
+  - {fileID: -3769266065153186098}
+  - {fileID: 4939479538852095462}
+  - {fileID: -7804627479228492407}
+  - {fileID: -4038675305520457601}
+  - {fileID: -83235635002180759}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1588765420540717800}
+  - {fileID: -2544210241545578906}
   StringsBanks:
-  - {fileID: 5930297516883445073}
-  cacheTime: 638332849563684418
+  - {fileID: -6231639127751259369}
+  cacheTime: 638387025842200931
   cacheVersion: 131607
---- !u!114 &963412954756856585
+--- !u!114 &718491770015277607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/impact_collect_coin
+  m_EditorClassIdentifier: 
+  Path: event:/impact_collect_coin
+  Guid:
+    Data1: -650853111
+    Data2: 1209778061
+    Data3: 2079391927
+    Data4: -1161595203
+  Banks:
+  - {fileID: 5298852119292625546}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &1506409772935752460
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,35 +412,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Impact.bank
+  m_Name: bank:/Shot.bank
   m_EditorClassIdentifier: 
-  Path: Assets/LocalExternalPackage/SamoozGeneralAssets/SamoozFMODProject/Build/Desktop/Impact.bank
-  Name: Impact
-  StudioPath: bank:/Impact
-  lastModified: 638332849563684418
+  Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/Shot.bank
+  Name: Shot
+  StudioPath: bank:/Shot
+  lastModified: 638387025842200931
   FileSizes:
   - Name: Desktop
-    Value: 116032
-  Exists: 1
---- !u!114 &1588765420540717800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/FootStep.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/LocalExternalPackage/SamoozGeneralAssets/SamoozFMODProject/Build/Desktop/FootStep.bank
-  Name: FootStep
-  StudioPath: bank:/FootStep
-  lastModified: 638332849563643377
-  FileSizes:
-  - Name: Desktop
-    Value: 71904
+    Value: 4032
   Exists: 1
 --- !u!114 &1726902853132398480
 MonoBehaviour:
@@ -276,13 +441,94 @@ MonoBehaviour:
     Data3: -184125517
     Data4: 1328409079
   Banks:
-  - {fileID: 963412954756856585}
+  - {fileID: 5298852119292625546}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
+  Length: 102
+--- !u!114 &2024099637015875995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/footstep_fart
+  m_EditorClassIdentifier: 
+  Path: event:/footstep_fart
+  Guid:
+    Data1: 333254258
+    Data2: 1296018792
+    Data3: 1349448872
+    Data4: 1868585516
+  Banks:
+  - {fileID: -2544210241545578906}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &2095348859818517041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/movie_shutter
+  m_EditorClassIdentifier: 
+  Path: event:/movie_shutter
+  Guid:
+    Data1: -2112365935
+    Data2: 1245289601
+    Data3: -1298413152
+    Data4: 783815463
+  Banks:
+  - {fileID: -796590778810704839}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &2922851094386954624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/bicycle_step
+  m_EditorClassIdentifier: 
+  Path: event:/bicycle_step
+  Guid:
+    Data1: 2063040937
+    Data2: 1105160179
+    Data3: -505466953
+    Data4: -1914056576
+  Banks:
+  - {fileID: -2544210241545578906}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
   Length: 0
 --- !u!114 &3878185505168113089
 MonoBehaviour:
@@ -303,14 +549,61 @@ MonoBehaviour:
     Data3: 551223698
     Data4: -1610697519
   Banks:
-  - {fileID: 963412954756856585}
+  - {fileID: 5298852119292625546}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
+--- !u!114 &4939479538852095462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/impact_powerup
+  m_EditorClassIdentifier: 
+  Path: event:/impact_powerup
+  Guid:
+    Data1: -485395058
+    Data2: 1145894758
+    Data3: 1323669662
+    Data4: 2004749638
+  Banks:
+  - {fileID: 5298852119292625546}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 60
+  Length: 0
+--- !u!114 &5298852119292625546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Impact.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/Impact.bank
+  Name: Impact
+  StudioPath: bank:/Impact
+  lastModified: 638387025842189090
+  FileSizes:
+  - Name: Desktop
+    Value: 176480
+  Exists: 1
 --- !u!114 &5419614790362868061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,26 +631,6 @@ MonoBehaviour:
   - Drop
   - Value C
   Exists: 1
---- !u!114 &5930297516883445073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/FootStep.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/LocalExternalPackage/SamoozGeneralAssets/SamoozFMODProject/Build/Desktop/FootStep.strings.bank
-  Name: FootStep.strings
-  StudioPath: bank:/FootStep.strings
-  lastModified: 638332849563643377
-  FileSizes:
-  - Name: Desktop
-    Value: 1262
-  Exists: 1
 --- !u!114 &8955661129875911856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,11 +650,11 @@ MonoBehaviour:
     Data3: 568399249
     Data4: 1473148138
   Banks:
-  - {fileID: 963412954756856585}
+  - {fileID: 5298852119292625546}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 0
