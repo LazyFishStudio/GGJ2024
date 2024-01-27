@@ -24,6 +24,7 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 	public GameObject itemBox;
 	public TextMeshProUGUI itemName;
 	public TextMeshProUGUI itemDesc;
+	public Transform customerHandle;
 
 	private void Awake() {
 		customerIndex = -1;
@@ -104,7 +105,7 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 		}
 
 		customerIndex++;
-		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex]);
+		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex], customerHandle.position, Quaternion.identity, customerHandle);
 		Customer customer = customerObj.GetComponent<Customer>();
 
 		return customer;
@@ -120,9 +121,11 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 				pendingDelete.Add(mat as PotionMaterial);
 			}
 		}
+
 		foreach (var mat in pendingDelete) {
 			Destroy(mat.gameObject);
 		}
+
 	}
 
 	public void NextLevel() {
@@ -134,7 +137,7 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 	public void RestartLevel() {
 		ClearCurrentLevel();
 
-		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex]);
+		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex], customerHandle.position, Quaternion.identity, customerHandle);
 		curCustomer = customerObj.GetComponent<Customer>();
 	}
 }
