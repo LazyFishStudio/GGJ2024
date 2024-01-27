@@ -7,15 +7,26 @@ public class PotionMaterial : DragItem {
 	public string word;
 
 	private TextMeshPro textMesh;
-	protected override void Awake() {
-		base.Awake();
+	private void Awake() {
 		textMesh = GetComponentInChildren<TextMeshPro>();
 	}
 
-	protected virtual void Update() {
+	protected override void Update() {
 		base.Update();
 		if (textMesh != null)
 			textMesh.text = word;
+	}
+
+	public override void OnHoverEnter() {
+		transform.localScale *= 1.2f;
+
+		GGJGameMgr.Instance.tooltip.gameObject.SetActive(true);
+		GGJGameMgr.Instance.tooltip.SetupText(word);
+	}
+	public override void OnHoverExit() {
+		transform.localScale /= 1.2f;
+
+		GGJGameMgr.Instance.tooltip.gameObject.SetActive(false);
 	}
 }
  

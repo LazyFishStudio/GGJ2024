@@ -8,8 +8,7 @@ public class Bottle : DragItem
     public string result = "";
 
 	private TextMeshPro textMesh;
-	protected override void Awake() {
-		base.Awake();
+	private void Awake() {
 		textMesh = GetComponentInChildren<TextMeshPro>();
 	}
 

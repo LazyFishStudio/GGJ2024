@@ -12,9 +12,10 @@ public class Customer : SlotItem
 	public string[] targetSentence; // 通关检测方法1：考虑放入素材的顺序，丢进锅里的素材构成的咒语和配置的咒语相同
     public PotionMaterial[] targetMats; // 通关检测方法2：不考虑放入素材的顺序，丢进锅里的素材和配置的素材相同就可以
 
-	protected override void Awake() {
-		base.Awake();
+	private void Awake() {
 		EasyEvent.RegisterOnceCallback("ShowMats", ShowMats);
+		EasyEvent.RegisterOnceCallback("NextLevel", () => { GGJGameMgr.Instance.NextLevel(); });
+		EasyEvent.RegisterOnceCallback("RestartLevel", () => { GGJGameMgr.Instance.RestartLevel(); });
 	}
 
 	private void Start() {

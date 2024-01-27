@@ -21,11 +21,14 @@ public class DragMgr : SingletonMono<DragMgr>
     private void Update() {
         GetMousePos();
         sm.UpdateStateAction();
+        GGJGameMgr.Instance.tooltip.SetCornerToPos(Bros.UI2D.Tooltip.CornerOption.LeftBottom, DragMgr.Instance.GetMousePos());
     }
 
     public DragItem dragItem;
     private DragItem focusDragItem;
     private SlotItem focusSlotItem;
+    private ClickItem focusClickItem;
+
     private void Awake() {
         sm = new StateMachine<State>(State.Idle);
 
@@ -33,20 +36,25 @@ public class DragMgr : SingletonMono<DragMgr>
             onEnter: () => UpdateFocusDragItem(),
             onUpdate: () => {
                 UpdateFocusDragItem();
+                UpdateFocusClickItem();
                 if (focusDragItem != null && Input.GetKeyDown(KeyCode.Mouse0)) {
+                    dragItem = focusDragItem;
                     sm.GotoState(State.Drag);
                     return;
 				}
+                if (focusClickItem != null && Input.GetKeyDown(KeyCode.Mouse0)) {
+                    focusClickItem?.OnHoverExit();
+                    focusClickItem.OnClick();
+                }
             },
-            onExit: () => focusDragItem?.OnHoverExit()
+            onExit: () => { focusDragItem?.OnHoverExit(); focusDragItem = null; }
         );
         sm.GetState(State.Drag).Bind(
             onEnter: () => {
-                if (focusDragItem is PotionMaterial) {
-                    dragItem = Instantiate(focusDragItem.gameObject, mousePos, Quaternion.identity, null).GetComponent<DragItem>();
+                if (dragItem is PotionMaterial) {
+                    dragItem = Instantiate(dragItem.gameObject, mousePos, Quaternion.identity, null).GetComponent<DragItem>();
                     dragItem.SetAttachToMouse(true);
                 } else {
-                    dragItem = focusDragItem;
                     dragItem.SetAttachToMouse(true);
                 }
             },
@@ -65,7 +73,7 @@ public class DragMgr : SingletonMono<DragMgr>
                     return;
                 }
 			},
-            onExit: () => focusSlotItem?.OnHoverExit()
+            onExit: () => { focusSlotItem?.OnHoverExit(); focusSlotItem = null; }
         );
 
         sm.Init();
@@ -84,6 +92,22 @@ public class DragMgr : SingletonMono<DragMgr>
             focusDragItem?.OnHoverExit();
             focusDragItem = newFocusItem;
             focusDragItem?.OnHoverEnter();
+        }
+    }
+
+    private void UpdateFocusClickItem() {
+        ClickItem newFocusItem = null;
+        foreach (var item in ClickItem.allClickItems) {
+            Collider2D collider = item.GetComponent<Collider2D>();
+            if (collider.OverlapPoint(mousePos)) {
+                newFocusItem = item;
+            }
+        }
+
+        if (newFocusItem != focusClickItem) {
+            focusClickItem?.OnHoverExit();
+            focusClickItem = newFocusItem;
+            focusClickItem?.OnHoverEnter();
         }
     }
 

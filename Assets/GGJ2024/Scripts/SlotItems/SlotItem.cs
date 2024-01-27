@@ -11,20 +11,11 @@ public class SlotItem : MonoBehaviour
 	private void OnEnable() => allSlotItems.Add(this);
 	private void OnDisable() => allSlotItems.Remove(this);
 
-	private SpriteRenderer render;
-	protected virtual void Awake() {
-		render = GetComponent<SpriteRenderer>();
-		if (render == null)
-			render = GetComponentInChildren<SpriteRenderer>();
-	}
-
 	public virtual void OnHoverEnter() {
-		if (render != null)
-			render.color = Color.red;
+		transform.localScale *= 1.2f;
 	}
 	public virtual void OnHoverExit() {
-		if (render != null)
-			render.color = Color.white;
+		transform.localScale /= 1.2f;
 	}
 
 	public virtual bool CheckAcceptDragItem(DragItem item) {

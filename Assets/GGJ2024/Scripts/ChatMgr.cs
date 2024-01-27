@@ -12,6 +12,10 @@ public class ChatMgr : SingletonMono<ChatMgr>
 	public TextMeshProUGUI nameText;
 	public TypewriterCore typeWriter;
 
+	private void Awake() {
+		EasyEvent.RegisterCallback("HideChatBox", () => { chatBox.SetActive(false); });
+	}
+
 	private void OnEnable() {
 		DialogueTree.OnSubtitlesRequest += OnSubtitlesRequest;
 		DialogueTree.OnMultipleChoiceRequest += OnMultipleChoiceRequest;

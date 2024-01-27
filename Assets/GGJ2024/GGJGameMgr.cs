@@ -4,6 +4,8 @@ using UnityEngine;
 using Febucci.UI.Core;
 using NodeCanvas.DialogueTrees;
 using System.Linq;
+using Bros.UI2D;
+
 /// <summary>
 /// 流程：
 ///     1.获取顾客
@@ -16,7 +18,11 @@ using System.Linq;
 /// </summary>
 public class GGJGameMgr : SingletonMono<GGJGameMgr>
 {
+	public Tooltip tooltip;
+	public PotionCauldron pot;
+
 	void Awake() {
+		customerIndex = -1;
 		InitGameFlowSM();
 	}
 
@@ -86,7 +92,7 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 		gameFlowSM.Init();
 	}
 
-	private Customer CreateAndGetNextCustomer() {
+	public Customer CreateAndGetNextCustomer() {
 
 		if (customerIndex >= customerPrefabs.Length) {
 			// 游戏结束
@@ -94,13 +100,39 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 			return null;
 		}
 
+		customerIndex++;
 		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex]);
 		Customer customer = customerObj.GetComponent<Customer>();
 
-		customerIndex++;
-
 		return customer;
+	}
 
+	private void ClearCurrentLevel() {
+		Destroy(curCustomer.gameObject);
+		pot.ClearMaterial();
+
+		List<PotionMaterial> pendingDelete = new List<PotionMaterial>();
+		foreach (var mat in DragItem.allDragItems) {
+			if (mat is PotionMaterial) {
+				pendingDelete.Add(mat as PotionMaterial);
+			}
+		}
+		foreach (var mat in pendingDelete) {
+			Destroy(mat.gameObject);
+		}
+	}
+
+	public void NextLevel() {
+		ClearCurrentLevel();
+
+		curCustomer = CreateAndGetNextCustomer();
+	}
+
+	public void RestartLevel() {
+		ClearCurrentLevel();
+
+		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex]);
+		curCustomer = customerObj.GetComponent<Customer>();
 	}
 }
 
