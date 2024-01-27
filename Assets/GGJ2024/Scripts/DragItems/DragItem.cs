@@ -9,10 +9,10 @@ public class DragItem : MonoBehaviour
 	private void OnDisable() => allDragItems.Remove(this);
 
 	public virtual void OnHoverEnter() {
-		transform.localScale *= 1.2f;
+		transform.localScale *= 1.1f;
 	}
 	public virtual void OnHoverExit() {
-		transform.localScale /= 1.2f;
+		transform.localScale /= 1.1f;
 	}
 
 	private bool attached = false;

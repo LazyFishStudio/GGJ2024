@@ -9,11 +9,22 @@ public class ClickItem : MonoBehaviour
 	private void OnEnable() => allClickItems.Add(this);
 	private void OnDisable() => allClickItems.Remove(this);
 
+	public bool onHover = false;
 	public virtual void OnHoverEnter() {
-		transform.localScale *= 1.2f;
+		if (!onHover) {
+			onHover = true;
+			transform.localScale *= 1.1f;
+		}
 	}
 	public virtual void OnHoverExit() {
-		transform.localScale /= 1.2f;
+		if (onHover) {
+			onHover = false;
+			transform.localScale /= 1.1f;
+		}
+	}
+
+	public virtual bool CheckClick() {
+		return true;
 	}
 
 	public virtual void OnClick() {

@@ -42,9 +42,9 @@ public class DragMgr : SingletonMono<DragMgr>
                     sm.GotoState(State.Drag);
                     return;
 				}
-                if (focusClickItem != null && Input.GetKeyDown(KeyCode.Mouse0)) {
+                if (focusClickItem != null && focusClickItem.onHover && Input.GetKeyDown(KeyCode.Mouse0)) {
                     focusClickItem?.OnHoverExit();
-                    focusClickItem.OnClick();
+                    focusClickItem?.OnClick();
                 }
             },
             onExit: () => { focusDragItem?.OnHoverExit(); focusDragItem = null; }
@@ -99,7 +99,7 @@ public class DragMgr : SingletonMono<DragMgr>
         ClickItem newFocusItem = null;
         foreach (var item in ClickItem.allClickItems) {
             Collider2D collider = item.GetComponent<Collider2D>();
-            if (collider.OverlapPoint(mousePos)) {
+            if (collider.OverlapPoint(mousePos) && item.CheckClick()) {
                 newFocusItem = item;
             }
         }

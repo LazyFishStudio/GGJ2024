@@ -32,18 +32,12 @@ public class PotionCauldron : SlotItem {
     public override bool CheckAcceptDragItem(DragItem item) {
         if (item is PotionMaterial)
             return true;
-        if (item is Bottle && (item as Bottle).result == "")
-            return true;
         return false;
     }
 
     public override void AcceptDragItem(DragItem item) {
-        Bottle bottle = item as Bottle;
         PotionMaterial potionMat = item as PotionMaterial;
-        if (bottle != null) {
-            bottle.result = sentence;
-            ClearMaterial();
-        } else if (potionMat != null) {
+        if (potionMat != null) {
             AddMaterial(potionMat);
             potionMat.gameObject.SetActive(false);
         }

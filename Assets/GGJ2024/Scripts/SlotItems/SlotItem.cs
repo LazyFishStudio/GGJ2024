@@ -12,10 +12,10 @@ public class SlotItem : MonoBehaviour
 	private void OnDisable() => allSlotItems.Remove(this);
 
 	public virtual void OnHoverEnter() {
-		transform.localScale *= 1.2f;
+		transform.localScale *= 1.1f;
 	}
 	public virtual void OnHoverExit() {
-		transform.localScale /= 1.2f;
+		transform.localScale /= 1.1f;
 	}
 
 	public virtual bool CheckAcceptDragItem(DragItem item) {
