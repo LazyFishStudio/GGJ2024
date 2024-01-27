@@ -21,16 +21,15 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 	public Tooltip tooltip;
 	public PotionCauldron pot;
 
-	void Awake() {
+	private void Awake() {
 		customerIndex = -1;
 		InitGameFlowSM();
 	}
 
-	void Update() {
-		if (Input.GetKeyDown(KeyCode.P)) {
-			gameFlowSM.GotoState(GameFlowState.CustomerEnter);
-		}
+	private void Start() {
+		gameFlowSM.GotoState(GameFlowState.CustomerEnter);
 	}
+
 	public enum GameFlowState {
 		Idle, // 游戏流程未开始时
 		CustomerEnter, // 获取顾客，播放进门动画
