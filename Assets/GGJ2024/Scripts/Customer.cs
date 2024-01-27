@@ -14,6 +14,9 @@ public class Customer : SlotItem
 	public List<string> targetSentences;
 	public List<string> targetBranchName;
 
+    public Sprite[] characterSprites;
+    private SpriteRenderer spriteRend;
+
 	private Dictionary<string, string> branchDict;
 
 	private void OnDestroy() {
@@ -22,6 +25,9 @@ public class Customer : SlotItem
 	}
 
 	private void Awake() {
+
+        spriteRend = GetComponentInChildren<SpriteRenderer>();
+        spriteRend.sprite = characterSprites[2];
 		branchDict = new Dictionary<string, string>();
 
 		int length = targetSentences.Count;
@@ -49,6 +55,12 @@ public class Customer : SlotItem
 		}
 		GetComponent<DialogueTreeController>().StartDialogue(GetComponent<DialogueActor>());
 	}
+
+    private void Update() {
+        EasyEvent.RegisterCallback("EndingA", () => spriteRend.sprite = characterSprites[0]);
+        EasyEvent.RegisterCallback("EndingB", () => spriteRend.sprite = characterSprites[1]);
+        EasyEvent.RegisterCallback("EndingC", () => spriteRend.sprite = characterSprites[2]);
+    }
 
 	protected virtual void ShowMats() {
 		foreach (var mat in mats) {

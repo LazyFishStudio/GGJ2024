@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &117140324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1023,7 +1023,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: cce1cf4bf47fcb94e8467245aa7eb8ee, type: 3}
-  m_Color: {r: 0.10101485, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.10196066, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1169,7 +1169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51, y: -123}
+  m_AnchoredPosition: {x: -57.000015, y: -123}
   m_SizeDelta: {x: 220.7772, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &459273580
@@ -1271,8 +1271,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280173667
-  m_fontColor: {r: 0.38823533, g: 0.26666668, b: 0.11764707, a: 1}
+    rgba: 4291611852
+  m_fontColor: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1861,8 +1861,8 @@ Transform:
   m_GameObject: {fileID: 668413408}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.3999996, y: -2.5, z: 0}
-  m_LocalScale: {x: -0.6191097, y: 0.61910975, z: 0.61910975}
+  m_LocalPosition: {x: -6.041, y: -2.6426, z: 0}
+  m_LocalScale: {x: -0.8161104, y: 0.8161105, z: 0.8161105}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1467058360}
@@ -2560,6 +2560,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3300144675138511379, guid: 63bf62a6a8d484a43a0ce6be1709055e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b0f60df6cbef0949be32e61c52a52f6, type: 3}
     - target: {fileID: 4258892708102787255, guid: 63bf62a6a8d484a43a0ce6be1709055e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3016,7 +3020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 555, y: 100}
+  m_AnchoredPosition: {x: 550, y: 100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1417519350
@@ -3097,8 +3101,8 @@ Transform:
   m_GameObject: {fileID: 1417519350}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.02, y: -2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.54, y: -1.9835, z: 0}
+  m_LocalScale: {x: 1.3182, y: 1.3182, z: 1.3182}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1467058360}
@@ -4049,8 +4053,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -320, y: 0}
-  m_SizeDelta: {x: 859.39, y: 300}
+  m_AnchoredPosition: {x: -374.85, y: 0}
+  m_SizeDelta: {x: 749.69, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2035262719973324251
 CanvasRenderer:
@@ -4178,7 +4182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useTypeWriter: 1
-  startTypewriterMode: 3
+  startTypewriterMode: 2
   hideAppearancesOnSkip: 0
   triggerEventsOnSkip: 0
   resetTypingSpeedAtStartup: 1
@@ -4258,6 +4262,10 @@ PrefabInstance:
     - target: {fileID: 4239688195211931194, guid: 0785bf634d8b3894aa04c5264ae6f7b1, type: 3}
       propertyPath: m_Name
       value: Effect-MagicExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239688195211931194, guid: 0785bf634d8b3894aa04c5264ae6f7b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4442,7 +4450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &8834016825760487983
 SpriteRenderer:
   m_ObjectHideFlags: 0
