@@ -192,9 +192,9 @@ MonoBehaviour:
   - {fileID: 6662557022277626614, guid: 80722bd40ae7bc74db7f00afb3d95305, type: 3}
   - {fileID: 2951205885017541454, guid: e05f4c66e7b27234db52710d81035c91, type: 3}
   achievements:
-  - {fileID: 6622360565526945340, guid: c58057320e1c3244aa4062057615da81, type: 3}
-  - {fileID: 7147915098024838577, guid: 99b434990b0b4e641b2ba723bb6db9b9, type: 3}
-  - {fileID: 1028571452721319363, guid: 868ead12c9e4cd64da4fd347986b49ef, type: 3}
+  - {fileID: 6725549732210760178, guid: 23cf0340671dfad4c9939da64ca7ad10, type: 3}
+  - {fileID: 6725549732210760178, guid: cbf1579671110a849b95a06f7e7e8e49, type: 3}
+  - {fileID: 6725549732210760178, guid: 3e7137f62615b784eb39a6e4f6afc118, type: 3}
   defaultBranchName: Failed
   targetSentences:
   - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "

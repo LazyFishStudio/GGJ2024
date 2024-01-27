@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7322378596784583166}
   - component: {fileID: 2669536403431361428}
   m_Layer: 0
-  m_Name: AchieveL1A
+  m_Name: Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
