@@ -8,7 +8,6 @@ using TMPro;
 public class ChatMgr : SingletonMono<ChatMgr>
 {
 	public GameObject chatBox;
-	public GameObject continueText;
 	public TextMeshProUGUI nameText;
 	public TypewriterCore typeWriter;
 
@@ -29,21 +28,22 @@ public class ChatMgr : SingletonMono<ChatMgr>
 
 	public void HideChatBox() {
 		chatBox.SetActive(false);
+		nameText.text = "";
+		typeWriter.GetComponent<TextMeshProUGUI>().text = "";
 	}
 
 	public void ShowText(string actorName, string text, System.Action continueCallback) {
 		curCallback = continueCallback;
 
-		nameText.text = actorName;
 		chatBox.SetActive(true);
-		continueText.SetActive(false);
+
+		nameText.text = actorName;
 		typeWriter.ShowText(text);
 	}
 
 	private System.Action curCallback = null;
 	private void OnTextShowed() {
-		continueText.SetActive(true);
-		EasyEvent.RegisterOnceCallback("ChatContinue", curCallback);
+		EasyEvent.RegisterOnceCallback("ChatContinue", () => { curCallback?.Invoke(); });
 	}
 
 	private void OnSubtitlesRequest(SubtitlesRequestInfo info) {
