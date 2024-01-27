@@ -9,15 +9,19 @@ public class DragItem : MonoBehaviour
 	private void OnDisable() => allDragItems.Remove(this);
 
 	private SpriteRenderer render;
-	private void Awake() {
+	protected virtual void Awake() {
 		render = GetComponent<SpriteRenderer>();
+		if (render == null)
+			render = GetComponentInChildren<SpriteRenderer>();
 	}
 
-	public void OnHoverEnter() {
-		render.color = Color.red;
+	public virtual void OnHoverEnter() {
+		if (render != null)
+			render.color = Color.red;
 	}
-	public void OnHoverExit() {
-		render.color = Color.white;
+	public virtual void OnHoverExit() {
+		if (render != null)
+			render.color = Color.white;
 	}
 
 	private bool attached = false;
@@ -25,7 +29,7 @@ public class DragItem : MonoBehaviour
 		attached = isAttach;
 	}
 
-	private void Update() {
+	protected virtual void Update() {
 		if (attached) {
 			transform.position = DragMgr.Instance.GetMousePos();
 		}

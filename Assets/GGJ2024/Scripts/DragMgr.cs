@@ -23,7 +23,7 @@ public class DragMgr : SingletonMono<DragMgr>
         sm.UpdateStateAction();
     }
 
-    private DragItem dragItem;
+    public DragItem dragItem;
     private DragItem focusDragItem;
     private SlotItem focusSlotItem;
     private void Awake() {
@@ -42,8 +42,13 @@ public class DragMgr : SingletonMono<DragMgr>
         );
         sm.GetState(State.Drag).Bind(
             onEnter: () => {
-                dragItem = Instantiate(focusDragItem.gameObject, mousePos, Quaternion.identity, null).GetComponent<DragItem>();
-                dragItem.SetAttachToMouse(true);
+                if (focusDragItem is PotionMaterial) {
+                    dragItem = Instantiate(focusDragItem.gameObject, mousePos, Quaternion.identity, null).GetComponent<DragItem>();
+                    dragItem.SetAttachToMouse(true);
+                } else {
+                    dragItem = focusDragItem;
+                    dragItem.SetAttachToMouse(true);
+                }
             },
             onUpdate: () => {
                 UpdateFocusSlotItem();
@@ -52,7 +57,9 @@ public class DragMgr : SingletonMono<DragMgr>
 
                     if (focusSlotItem != null) {
                         focusSlotItem.AcceptDragItem(dragItem);
-                    }
+                    } else if (dragItem is PotionMaterial) {
+                        Destroy(dragItem.gameObject);
+					}
 
                     sm.GotoState(State.Idle);
                     return;

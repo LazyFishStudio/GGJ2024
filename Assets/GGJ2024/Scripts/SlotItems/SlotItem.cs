@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NodeCanvas.DialogueTrees;
+using NodeCanvas;
 
 public class SlotItem : MonoBehaviour
 {
@@ -10,15 +12,19 @@ public class SlotItem : MonoBehaviour
 	private void OnDisable() => allSlotItems.Remove(this);
 
 	private SpriteRenderer render;
-	private void Awake() {
+	protected virtual void Awake() {
 		render = GetComponent<SpriteRenderer>();
+		if (render == null)
+			render = GetComponentInChildren<SpriteRenderer>();
 	}
 
-	public void OnHoverEnter() {
-		render.color = Color.red;
+	public virtual void OnHoverEnter() {
+		if (render != null)
+			render.color = Color.red;
 	}
-	public void OnHoverExit() {
-		render.color = Color.white;
+	public virtual void OnHoverExit() {
+		if (render != null)
+			render.color = Color.white;
 	}
 
 	public virtual bool CheckAcceptDragItem(DragItem item) {

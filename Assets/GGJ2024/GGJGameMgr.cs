@@ -97,10 +97,6 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex]);
 		Customer customer = customerObj.GetComponent<Customer>();
 
-		if (customer) {
-			Debug.Log(customer.customerName);
-		}
-
 		customerIndex++;
 
 		return customer;

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Febucci.UI.Core;
 using NodeCanvas.DialogueTrees;
+using TMPro;
 
 public class ChatMgr : SingletonMono<ChatMgr>
 {
 	public GameObject chatBox;
 	public GameObject continueText;
+	public TextMeshProUGUI nameText;
 	public TypewriterCore typeWriter;
 
 	private void OnEnable() {
@@ -25,9 +27,10 @@ public class ChatMgr : SingletonMono<ChatMgr>
 		chatBox.SetActive(false);
 	}
 
-	public void ShowText(string text, System.Action continueCallback) {
+	public void ShowText(string actorName, string text, System.Action continueCallback) {
 		curCallback = continueCallback;
 
+		nameText.text = actorName;
 		chatBox.SetActive(true);
 		continueText.SetActive(false);
 		typeWriter.ShowText(text);
@@ -40,7 +43,7 @@ public class ChatMgr : SingletonMono<ChatMgr>
 	}
 
 	private void OnSubtitlesRequest(SubtitlesRequestInfo info) {
-		ShowText(info.statement.text, continueCallback: () => info.Continue());
+		ShowText(info.actor.name, info.statement.text, continueCallback: () => info.Continue());
 	}
 
 	private void OnMultipleChoiceRequest(MultipleChoiceRequestInfo info) {
