@@ -16,9 +16,6 @@ using System.Linq;
 /// </summary>
 public class GGJGameMgr : SingletonMono<GGJGameMgr>
 {
-	public TypewriterCore typeWriter;
-	public GameObject chatBox;
-
 	void Awake() {
 		InitGameFlowSM();
 	}
@@ -28,18 +25,6 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 			gameFlowSM.GotoState(GameFlowState.CustomerEnter);
 		}
 	}
-	
-
-	public void ShowText(string text) {
-		chatBox.SetActive(true);
-		typeWriter.ShowText(text);
-	}
-
-	public void HideChatBox() {
-		chatBox.SetActive(false);
-	}
-
-	
 	public enum GameFlowState {
 		Idle, // 游戏流程未开始时
 		CustomerEnter, // 获取顾客，播放进门动画
@@ -121,6 +106,5 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 		return customer;
 
 	}
-
 }
 

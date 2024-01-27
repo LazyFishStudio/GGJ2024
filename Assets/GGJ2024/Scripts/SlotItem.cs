@@ -24,4 +24,7 @@ public class SlotItem : MonoBehaviour
 	public virtual bool CheckAcceptDragItem(DragItem item) {
 		return true;
 	}
+	public virtual void AcceptDragItem(DragItem item) {
+		Destroy(item.gameObject);
+	}
 }

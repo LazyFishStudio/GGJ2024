@@ -30,13 +30,15 @@ public class DragMgr : SingletonMono<DragMgr>
         sm = new StateMachine<State>(State.Idle);
 
         sm.GetState(State.Idle).Bind(
+            onEnter: () => UpdateFocusDragItem(),
             onUpdate: () => {
                 UpdateFocusDragItem();
                 if (focusDragItem != null && Input.GetKeyDown(KeyCode.Mouse0)) {
                     sm.GotoState(State.Drag);
                     return;
 				}
-            }
+            },
+            onExit: () => focusDragItem?.OnHoverExit()
         );
         sm.GetState(State.Drag).Bind(
             onEnter: () => {
@@ -46,16 +48,17 @@ public class DragMgr : SingletonMono<DragMgr>
             onUpdate: () => {
                 UpdateFocusSlotItem();
                 if (Input.GetKeyUp(KeyCode.Mouse0)) {
-
-
                     dragItem.SetAttachToMouse(false);
 
-
+                    if (focusSlotItem != null) {
+                        focusSlotItem.AcceptDragItem(dragItem);
+                    }
 
                     sm.GotoState(State.Idle);
                     return;
                 }
-			}
+			},
+            onExit: () => focusSlotItem?.OnHoverExit()
         );
 
         sm.Init();
@@ -87,13 +90,14 @@ public class DragMgr : SingletonMono<DragMgr>
             SlotItem slotItem = collider.GetComponent<SlotItem>();
             if (slotItem == null || !slotItem.CheckAcceptDragItem(dragItem))
                 continue;
-            newFocusItem = slotItem;
+            if (newFocusItem == null || newFocusItem.GetInstanceID() > slotItem.GetInstanceID())
+                newFocusItem = slotItem;
         }
 
         if (newFocusItem != focusSlotItem) {
             focusSlotItem?.OnHoverExit();
             focusSlotItem = newFocusItem;
-            focusDragItem?.OnHoverEnter();
+            focusSlotItem?.OnHoverEnter();
         }
     }
 }

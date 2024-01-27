@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using NodeCanvas.DialogueTrees;
 
 
 public class GGJTestMgr : SingletonMono<GGJTestMgr>
 {
     public string textChatBoxContent = "²âÊÔ²âÊÔ²âÊÔ";
+    public DialogueTreeController controller;
+    public DialogueTree testDialogueTree;
+    public DialogueActorAsset testActor;
 }
 
 [CustomEditor(typeof(GGJTestMgr))] // ½«YourComponentÌæ»»ÎªÄãµÄ½Å±¾Ãû³Æ
-public class CustomInspector : Editor
+public class GGJTestMgrEditor : Editor
 {
     public override void OnInspectorGUI() {
         GGJTestMgr testMgr = GGJTestMgr.Instance;
@@ -20,12 +24,13 @@ public class CustomInspector : Editor
         if (EditorApplication.isPlaying) {
             EditorGUILayout.LabelField("Play Mode Buttons");
 
-            if (GUILayout.Button("TestShowText")) {
-                GGJGameMgr.Instance.ShowText(testMgr.textChatBoxContent);
+            if (GUILayout.Button("TestDialogue")) {
+                testMgr.controller.StartDialogue();
+                // ChatMgr.Instance.ShowText(testMgr.textChatBoxContent, );
             }
 
             if (GUILayout.Button("HideChatBox")) {
-                GGJGameMgr.Instance.HideChatBox();
+                ChatMgr.Instance.HideChatBox();
             }
 
             EditorGUILayout.LabelField("All DragItem");
