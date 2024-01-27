@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Herb(\u559C\u7F8A\u7F8A) Variant"
       objectReference: {fileID: 0}
+    - target: {fileID: 8520399207266596397, guid: de3a472a7c5ac494ca2e3e04d3944eec, type: 3}
+      propertyPath: word
+      value: "\u559C\u7F8A\u7F8A"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

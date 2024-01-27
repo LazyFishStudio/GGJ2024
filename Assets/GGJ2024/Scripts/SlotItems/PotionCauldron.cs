@@ -20,7 +20,7 @@ public class PotionCauldron : SlotItem {
 		if (matList.Count >= maxMatNum || mat == null) {
 			return;
 		}
-		sentence = sentence + mat.word;
+		sentence = sentence + " " + mat.word;
 		matList.Add(mat);
 	}
 
