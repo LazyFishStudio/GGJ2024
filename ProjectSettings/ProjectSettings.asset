@@ -815,7 +815,7 @@ PlayerSettings:
     PS5: 
     QNX: 
     Stadia: 
-    Standalone: 
+    Standalone: NODECANVAS
     VisionOS: 
     WebGL: 
     XboxOne: 
