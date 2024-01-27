@@ -8,12 +8,18 @@ using NodeCanvas.Framework;
 public class Customer : SlotItem
 {
 	public PotionMaterial[] mats;
+	public List<GameObject> achievements;
 
 	public string defaultBranchName = "Failed";
 	public List<string> targetSentences;
 	public List<string> targetBranchName;
 
 	private Dictionary<string, string> branchDict;
+
+	private void OnDestroy() {
+		foreach (var item in FindObjectsOfType<Achievement>())
+			Destroy(item.gameObject);
+	}
 
 	private void Awake() {
 		branchDict = new Dictionary<string, string>();
@@ -38,6 +44,9 @@ public class Customer : SlotItem
 	}
 
 	private void Start() {
+		foreach (var achievement in achievements) {
+			Instantiate(achievement);
+		}
 		GetComponent<DialogueTreeController>().StartDialogue(GetComponent<DialogueActor>());
 	}
 
