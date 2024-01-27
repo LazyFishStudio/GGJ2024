@@ -191,8 +191,13 @@ MonoBehaviour:
   - {fileID: 8128272016369098764, guid: 3982647fef761074589de9f03fd8dfd9, type: 3}
   - {fileID: 6662557022277626614, guid: 80722bd40ae7bc74db7f00afb3d95305, type: 3}
   - {fileID: 2951205885017541454, guid: e05f4c66e7b27234db52710d81035c91, type: 3}
-  targetSentence: []
-  targetMats: []
+  defaultBranchName: Failed
+  targetSentences:
+  - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
+  - "\u6CB8\u7F8A\u7F8A \u7684 \u5FE0\u8BDA "
+  targetBranchName:
+  - A
+  - C
 --- !u!1 &8670351827681264710
 GameObject:
   m_ObjectHideFlags: 0

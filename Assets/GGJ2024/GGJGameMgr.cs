@@ -5,6 +5,7 @@ using Febucci.UI.Core;
 using NodeCanvas.DialogueTrees;
 using System.Linq;
 using Bros.UI2D;
+using TMPro;
 
 /// <summary>
 /// 流程：
@@ -20,6 +21,9 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 {
 	public Tooltip tooltip;
 	public PotionCauldron pot;
+	public GameObject itemBox;
+	public TextMeshProUGUI itemName;
+	public TextMeshProUGUI itemDesc;
 
 	private void Awake() {
 		customerIndex = -1;

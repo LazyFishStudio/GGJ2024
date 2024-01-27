@@ -8,14 +8,33 @@ using NodeCanvas.Framework;
 public class Customer : SlotItem
 {
 	public PotionMaterial[] mats;
-    // 优先使用方法1
-	public string[] targetSentence; // 通关检测方法1：考虑放入素材的顺序，丢进锅里的素材构成的咒语和配置的咒语相同
-    public PotionMaterial[] targetMats; // 通关检测方法2：不考虑放入素材的顺序，丢进锅里的素材和配置的素材相同就可以
+
+	public string defaultBranchName = "Failed";
+	public List<string> targetSentences;
+	public List<string> targetBranchName;
+
+	private Dictionary<string, string> branchDict;
 
 	private void Awake() {
+		branchDict = new Dictionary<string, string>();
+
+		int length = targetSentences.Count;
+		for (int idx = 0; idx < length; idx++) {
+			Debug.Log("[" + targetSentences[idx] + "] : " + targetBranchName[idx]);
+			branchDict[targetSentences[idx]] = targetBranchName[idx];
+		}
+
 		EasyEvent.RegisterOnceCallback("ShowMats", ShowMats);
 		EasyEvent.RegisterOnceCallback("NextLevel", () => { GGJGameMgr.Instance.NextLevel(); });
 		EasyEvent.RegisterOnceCallback("RestartLevel", () => { GGJGameMgr.Instance.RestartLevel(); });
+	}
+
+	private string GetBranchName(string sentence) {
+		Debug.Log("[" + sentence + "]");
+		if (branchDict.TryGetValue(sentence, out string result)) {
+			return result;
+		}
+		return defaultBranchName;
 	}
 
 	private void Start() {
@@ -29,13 +48,14 @@ public class Customer : SlotItem
 	}
 
 	public override bool CheckAcceptDragItem(DragItem item) {
-		return item is Bottle && (item as Bottle).result != "";
+		return item is Bottle;
 	}
 
 	public override void AcceptDragItem(DragItem item) {
 		Bottle bottle = item as Bottle;
 
-		(GetComponent<DialogueTreeController>().blackboard as Blackboard).AddVariable<string>("branchName", "小丑");
+		string branchName = GetBranchName(bottle.result);
+		(GetComponent<DialogueTreeController>().blackboard as Blackboard).AddVariable<string>("branchName", branchName);
 
 		Destroy(item.gameObject);
 

@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u6728\u5FC3 Variant"
       objectReference: {fileID: 0}
+    - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
+      propertyPath: itemDesc
+      value: "\u53EA\u662F\u6728\u5FC3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
+      propertyPath: itemName
+      value: "\u6728\u5FC3"
+      objectReference: {fileID: 0}
     - target: {fileID: 6017189243483955428, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2
