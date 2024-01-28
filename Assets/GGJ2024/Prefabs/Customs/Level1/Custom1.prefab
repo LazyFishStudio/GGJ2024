@@ -194,17 +194,16 @@ MonoBehaviour:
   achievements:
   - {fileID: 6725549732210760178, guid: 23cf0340671dfad4c9939da64ca7ad10, type: 3}
   - {fileID: 6725549732210760178, guid: cbf1579671110a849b95a06f7e7e8e49, type: 3}
-  - {fileID: 6725549732210760178, guid: 3e7137f62615b784eb39a6e4f6afc118, type: 3}
   defaultBranchName: Failed
   targetSentences:
   - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
   - "\u6CB8\u7F8A\u7F8A \u7684 \u5FE0\u8BDA "
   targetBranchName:
   - A
-  - C
+  - B
   characterSprites:
   - {fileID: 21300000, guid: 23075eacf1e0e5b488e77d162c356703, type: 3}
-  - {fileID: 21300000, guid: 464333b533dbf264c907482f5eab5795, type: 3}
+  - {fileID: 21300000, guid: 455d8485294db864d9521b6b1dab5b60, type: 3}
   - {fileID: 21300000, guid: 464333b533dbf264c907482f5eab5795, type: 3}
 --- !u!1 &8670351827681264710
 GameObject:

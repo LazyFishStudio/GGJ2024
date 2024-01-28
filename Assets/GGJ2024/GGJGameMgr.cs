@@ -26,6 +26,8 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 	public TextMeshProUGUI itemDesc;
 	public Transform customerHandle;
 
+	public GameObject customEffect;
+
 	private void Awake() {
 		InitGameFlowSM();
 		RegisterGameFlows();
@@ -144,8 +146,8 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 		EasyEvent.RegisterCallback("GameFinish", HandleGameFinish);
 		EasyEvent.RegisterCallback("ShowMats", HandleShowMats);
 		EasyEvent.RegisterCallback("EndingA", HandleEndingA);
-		EasyEvent.RegisterCallback("EndingA", HandleEndingB);
-		EasyEvent.RegisterCallback("EndingA", HandleEndingC);
+		EasyEvent.RegisterCallback("EndingB", HandleEndingB);
+		EasyEvent.RegisterCallback("EndingC", HandleEndingC);
 	}
 
 	public void HandlePause() {

@@ -34,7 +34,9 @@ public class Achievement : MonoBehaviour
             achievement.DOScale(Vector3.one * achieveBiggScale, stopTime).OnComplete(() => {
                 placeholder.SetActive(false);
                 achievement.DOScale(Vector3.one * achieveNormalScale, moveTime);
-                achievement.DOMove(placeholder.transform.position, moveTime);
+                achievement.DOMove(placeholder.transform.position, moveTime).OnComplete(() => {
+                    EasyEvent.TriggerEvent("AchievementFinish");
+                });
             });
         });
     }

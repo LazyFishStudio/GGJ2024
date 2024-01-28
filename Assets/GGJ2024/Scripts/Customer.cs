@@ -4,6 +4,7 @@ using UnityEngine;
 using Febucci.UI.Core;
 using NodeCanvas.DialogueTrees;
 using NodeCanvas.Framework;
+using DG.Tweening;
 
 public class Customer : SlotItem
 {
@@ -50,20 +51,30 @@ public class Customer : SlotItem
 	}
 
 	public void HandleEndings(string endingName) {
-		switch (endingName) {
-			case "EndingA": {
-				spriteRend.sprite = characterSprites[0];
-				break;
+		GGJGameMgr.Instance.customEffect.SetActive(false);
+		GGJGameMgr.Instance.customEffect.SetActive(true);
+
+		Debug.Log(endingName);
+
+		transform.DOMove(transform.position, 0.16666f).OnComplete(() => {
+			switch (endingName) {
+				case "EndingA": {
+					spriteRend.sprite = characterSprites[0];
+					break;
+				}
+				case "EndingB": {
+					spriteRend.sprite = characterSprites[1];
+					break;
+				}
+				case "EndingC": {
+					spriteRend.sprite = characterSprites[2];
+					break;
+				}
 			}
-			case "EndingB": {
-				spriteRend.sprite = characterSprites[1];
-				break;
-			}
-			case "EndingC": {
-				spriteRend.sprite = characterSprites[2];
-				break;
-			}
-		}
+			transform.DOMove(transform.position, 0.16666f).OnComplete(() => {
+				EasyEvent.TriggerEvent("EndingFinish");
+			});
+		});
 	}
 
 	public override bool CheckAcceptDragItem(DragItem item) {
