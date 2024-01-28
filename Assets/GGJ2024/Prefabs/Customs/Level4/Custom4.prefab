@@ -192,11 +192,13 @@ MonoBehaviour:
   - {fileID: 8128272016369098764, guid: 31b52fcb413bc1440a0c7940a7592ad5, type: 3}
   - {fileID: 6662557022277626614, guid: 78855ce8d17fa3f46b592e97f6627967, type: 3}
   - {fileID: 2951205885017541454, guid: 60b6c33e6d3e49e45acb12100ad030a7, type: 3}
-  achievements: []
+  achievements:
+  - {fileID: 683437645757316494, guid: c4625b118fe0f2849b2ef446f4a41204, type: 3}
+  - {fileID: 683437645757316494, guid: 5d04043014ae25f4b86e00b5f4857215, type: 3}
   defaultBranchName: Failed
   targetSentences:
-  - "\u83B7\u5F97 \u77F3\u5934 \u7684 \u7075\u9B42"
-  - "\u83B7\u5F97 \u52C7\u58EB \u7684 \u76D4\u7532"
+  - "\u83B7\u5F97 \u77F3\u5934 \u7684 \u7075\u9B42 "
+  - "\u83B7\u5F97 \u52C7\u58EB \u7684 \u76D4\u7532 "
   targetBranchName:
   - A
   - B
@@ -231,7 +233,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2762, y: 3.6434, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4258892708102787255}

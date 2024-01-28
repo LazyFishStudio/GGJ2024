@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d71fb7c52372e244baf2e69a9d0d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: "\u5377\u6BDB"
+  _name: "\u81EA\u7136\u5377-\u5947\u5179\u7C73\u7279"
   _portrait: {fileID: 2800000, guid: 464333b533dbf264c907482f5eab5795, type: 3}
   _dialogueColor: {r: 1, g: 1, b: 1, a: 1}
   _dialogueOffset: {x: 0, y: 0, z: 0}
@@ -191,7 +191,9 @@ MonoBehaviour:
   - {fileID: 8128272016369098764, guid: c3d2f84a0a8374346ac4038ed36ce89e, type: 3}
   - {fileID: 6662557022277626614, guid: aa1005a750e6707469660ceb47d9f1fd, type: 3}
   - {fileID: 2951205885017541454, guid: d436718c159daef4092d3c042f325909, type: 3}
-  achievements: []
+  achievements:
+  - {fileID: 683437645757316494, guid: 6078673a2133cdf4faa46a2f60042037, type: 3}
+  - {fileID: 683437645757316494, guid: 9dbea8b0df5777d4c8921ded015d7f32, type: 3}
   defaultBranchName: Failed
   targetSentences:
   - "\u614C\u4E71 \u7684 \u6D17\u526A\u5439 "
@@ -230,7 +232,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4258892708102787255}
