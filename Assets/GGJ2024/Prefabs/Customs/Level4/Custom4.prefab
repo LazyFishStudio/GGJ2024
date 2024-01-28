@@ -195,8 +195,8 @@ MonoBehaviour:
   - {fileID: 683437645757316494, guid: 5d04043014ae25f4b86e00b5f4857215, type: 3}
   defaultBranchName: Failed
   targetSentences:
-  - "\u65E0\u575A\u4E0D\u6467 \u7684 \u8EAB\u4F53"
-  - "\u65E0\u575A\u4E0D\u6467 \u7684 \u76D4\u7532"
+  - "\u65E0\u575A\u4E0D\u6467 \u7684 \u8EAB\u4F53 "
+  - "\u65E0\u575A\u4E0D\u6467 \u7684 \u76D4\u7532 "
   targetBranchName:
   - A
   - B
