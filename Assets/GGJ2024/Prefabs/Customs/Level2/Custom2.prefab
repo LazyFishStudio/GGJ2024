@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 3202462188455082886}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ca2059e052e571e469c61ba47e6634a8, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed4a002a85a40de4cbbe30f778578468, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: "\u5377\u6BDB"
-  _portrait: {fileID: 0}
+  _portrait: {fileID: 2800000, guid: 464333b533dbf264c907482f5eab5795, type: 3}
   _dialogueColor: {r: 1, g: 1, b: 1, a: 1}
   _dialogueOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &5762461272231533791
@@ -194,8 +194,8 @@ MonoBehaviour:
   achievements: []
   defaultBranchName: Failed
   targetSentences:
-  - "\u614C\u4E71 \u7684 \u6D17\u526A\u5439"
-  - "\u7075\u6027 \u7684 Tony"
+  - "\u614C\u4E71 \u7684 \u6D17\u526A\u5439 "
+  - "\u7075\u6027 \u7684 Tony "
   targetBranchName:
   - A
   - B
