@@ -28,6 +28,7 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 
 	public GameObject customEffect;
 
+
 	private void Awake() {
 		InitGameFlowSM();
 		RegisterGameFlows();

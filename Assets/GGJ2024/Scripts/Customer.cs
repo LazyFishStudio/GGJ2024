@@ -16,6 +16,7 @@ public class Customer : SlotItem
 	public List<string> targetBranchName;
 
     public Sprite[] characterSprites;
+
     private SpriteRenderer spriteRend;
 
 	private Dictionary<string, string> branchDict;
@@ -45,6 +46,7 @@ public class Customer : SlotItem
 	public void HandleEndings(string endingName) {
 		GGJGameMgr.Instance.customEffect.SetActive(false);
 		GGJGameMgr.Instance.customEffect.SetActive(true);
+		GGJGameMgr.Instance.pot.GetComponent<ClickPot>().expEmitter.Play();
 
 		Debug.Log(endingName);
 

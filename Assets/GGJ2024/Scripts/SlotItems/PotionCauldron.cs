@@ -15,6 +15,7 @@ public class PotionCauldron : SlotItem {
     public PotionMaterial testMat;
     public Color waterColor;
     public SpriteRenderer water;
+    public FMODUnity.StudioEventEmitter popEmitter;
 
     private void Awake() {
         textMesh.text = "";
@@ -31,6 +32,7 @@ public class PotionCauldron : SlotItem {
 		matList.Add(mat);
         textMesh.text = "<wave>" + sentence + "</wave>";
         water.color = Color.HSVToRGB(Random.Range(0, 1.0f), 1.0f, 1.0f);
+        popEmitter.Play();
 	}
 
     public void ClearMaterial() {
