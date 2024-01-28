@@ -20,14 +20,9 @@ public class Customer : SlotItem
 
 	private Dictionary<string, string> branchDict;
 
-	private void OnDestroy() {
-		foreach (var item in FindObjectsOfType<Achievement>())
-			Destroy(item.gameObject);
-	}
-
 	private void Awake() {
         spriteRend = GetComponentInChildren<SpriteRenderer>();
-        spriteRend.sprite = characterSprites[2];
+        spriteRend.sprite = characterSprites[characterSprites.Length - 1];
 		branchDict = new Dictionary<string, string>();
 
 		int length = targetSentences.Count;
@@ -44,9 +39,6 @@ public class Customer : SlotItem
 	}
 
 	private void Start() {
-		foreach (var achievement in achievements) {
-			Instantiate(achievement);
-		}
 		GetComponent<DialogueTreeController>().StartDialogue(GetComponent<DialogueActor>());
 	}
 
@@ -68,6 +60,18 @@ public class Customer : SlotItem
 				}
 				case "EndingC": {
 					spriteRend.sprite = characterSprites[2];
+					break;
+				}
+				case "EndingD": {
+					spriteRend.sprite = characterSprites[3];
+					break;
+				}
+				case "EndingE": {
+					spriteRend.sprite = characterSprites[4];
+					break;
+				}
+				case "EndingF": {
+					spriteRend.sprite = characterSprites[5];
 					break;
 				}
 			}

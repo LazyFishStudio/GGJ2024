@@ -148,6 +148,9 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 		EasyEvent.RegisterCallback("EndingA", HandleEndingA);
 		EasyEvent.RegisterCallback("EndingB", HandleEndingB);
 		EasyEvent.RegisterCallback("EndingC", HandleEndingC);
+		EasyEvent.RegisterCallback("EndingD", HandleEndingD);
+		EasyEvent.RegisterCallback("EndingE", HandleEndingE);
+		EasyEvent.RegisterCallback("EndingF", HandleEndingF);
 	}
 
 	public void HandlePause() {
@@ -191,6 +194,15 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 	}
 	public void HandleEndingC() {
 		curCustomer.HandleEndings("EndingC");
+	}
+	public void HandleEndingD() {
+		curCustomer.HandleEndings("EndingD");
+	}
+	public void HandleEndingE() {
+		curCustomer.HandleEndings("EndingE");
+	}
+	public void HandleEndingF() {
+		curCustomer.HandleEndings("EndingF");
 	}
 
 	public void RegisterAchievements() {
