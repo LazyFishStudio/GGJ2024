@@ -198,6 +198,7 @@ MonoBehaviour:
   targetSentences:
   - "\u9C7C \u957F\u51FA \u53CC\u817F "
   - "\u9C7C \u53D8\u6210 \u4EBA\u7C7B "
+  - 
   targetBranchName:
   - A
   - B
