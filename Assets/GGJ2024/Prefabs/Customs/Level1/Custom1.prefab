@@ -196,11 +196,19 @@ MonoBehaviour:
   - {fileID: 683437645757316494, guid: c83ecf9f209013c41b5569e5ebe1d5dd, type: 3}
   defaultBranchName: Failed
   targetSentences:
-  - "\u6CB8\u7F8A\u7F8A \u7684 \u5FE0\u8BDA "
+  - "\u6CB8\u7F8A\u7F8A \u7684 \u667A\u6167 "
+  - "\u667A\u6167 \u7684 \u6CB8\u7F8A\u7F8A "
   - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
+  - "\u667A\u6167 \u7684 \u559C\u7F8A\u7F8A "
+  - "\u559C\u7F8A\u7F8A \u7684 \u6CB8\u7F8A\u7F8A "
+  - "\u6CB8\u7F8A\u7F8A \u7684 \u559C\u7F8A\u7F8A "
   targetBranchName:
   - A
+  - A
   - B
+  - C
+  - C
+  - C
   characterSprites:
   - {fileID: 21300000, guid: 672170f1825b2ad4e83b0de6aba63500, type: 3}
   - {fileID: 21300000, guid: e08a247fdad722a4cbc5a1e31d661ee8, type: 3}
