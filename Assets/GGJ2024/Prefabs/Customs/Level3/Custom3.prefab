@@ -198,10 +198,15 @@ MonoBehaviour:
   targetSentences:
   - "\u9C7C \u957F\u51FA \u53CC\u817F "
   - "\u9C7C \u53D8\u6210 \u4EBA\u7C7B "
-  - 
+  - "\u53D8\u6210 \u4EBA\u7C7B \u53CC\u817F "
+  - "\u957F\u51FA \u4EBA\u7C7B \u53CC\u817F "
+  - "\u9C7C \u9C7C \u9C7C "
   targetBranchName:
   - A
   - B
+  - C
+  - C
+  - D
   characterSprites:
   - {fileID: 21300000, guid: 3bae2f3ee4ef50842899683fba50ab9b, type: 3}
   - {fileID: 21300000, guid: aac7c14a5204cec4da06225e0f0f3324, type: 3}

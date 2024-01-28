@@ -201,6 +201,7 @@ MonoBehaviour:
   - "\u575A\u5F3A \u7684 \u4F38\u76F4 "
   - "\u4F38\u76F4 \u7684 \u575A\u5F3A"
   - "\u575A\u5F3A \u575A\u5F3A \u575A\u5F3A"
+  - "\u5934\u53D1 \u575A\u5F3A \u786C\u76F4"
   targetBranchName:
   - A
   - B
@@ -208,6 +209,7 @@ MonoBehaviour:
   - D
   - D
   - D
+  - A
   characterSprites:
   - {fileID: 21300000, guid: 23075eacf1e0e5b488e77d162c356703, type: 3}
   - {fileID: 21300000, guid: e538fd4a212f908489efde20cc298801, type: 3}
