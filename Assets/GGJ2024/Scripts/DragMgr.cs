@@ -21,7 +21,8 @@ public class DragMgr : SingletonMono<DragMgr>
     private void Update() {
         GetMousePos();
         sm.UpdateStateAction();
-        GGJGameMgr.Instance.tooltip.SetCornerToPos(Bros.UI2D.Tooltip.CornerOption.LeftBottom, DragMgr.Instance.GetMousePos());
+        if (GGJGameMgr.Instance && GGJGameMgr.Instance.tooltip)
+            GGJGameMgr.Instance.tooltip.SetCornerToPos(Bros.UI2D.Tooltip.CornerOption.LeftBottom, DragMgr.Instance.GetMousePos());
     }
 
     public DragItem dragItem;

@@ -18,11 +18,7 @@ public class Achievement : MonoBehaviour
     public float stopTime = 0.5f;
     public float moveTime = 0.5f;
 
-    private Transform childSprite;
-    private void OnDestory() {
-        if (childSprite != null)
-            Destroy(childSprite.gameObject);
-	}
+    public Transform childSprite;
 
     private bool unlocked = false;
     public void UnlockAchievement() {

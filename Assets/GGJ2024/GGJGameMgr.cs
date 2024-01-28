@@ -38,6 +38,11 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 		HandleNextLevel();
 	}
 
+	private void Update() {
+		if (Input.GetKey(KeyCode.Escape))
+			Application.Quit();
+	}
+
 	public enum GameFlowState {
 		Idle, // 游戏流程未开始时
 		CustomerEnter, // 获取顾客，播放进门动画
@@ -176,10 +181,15 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 		RegisterAchievements();
 	}
 
+	public void HandleRestartButton() {
+		restartButton.SetActive(false);
+		curCustomer = CreateCurrentCustom();
+	}
+
+	public GameObject restartButton;
 	public void HandleRestartLevel() {
 		ClearCurrentLevel();
-
-		curCustomer = CreateCurrentCustom();
+		restartButton.SetActive(true);
 	}
 
 	public void HandleShowMats() {
@@ -216,6 +226,9 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 
 	public void ClearAchievements() {
 		foreach (var achievement in FindObjectsOfType<Achievement>()) {
+			if (achievement.childSprite != null)
+				Destroy(achievement.childSprite.gameObject);
+
 			Destroy(achievement.gameObject);
 		}
 	}
