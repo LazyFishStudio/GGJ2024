@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3548232622406128097}
   - component: {fileID: 6662557022277626614}
   m_Layer: 0
-  m_Name: "\u8702\u871C Variant"
+  m_Name: "L4\u8702\u871C Variant"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

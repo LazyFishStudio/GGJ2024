@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5025797932203339865}
   - component: {fileID: 2951205885017541454}
   m_Layer: 0
-  m_Name: "\u51B0\u971C\u6C34\u6676 Variant"
+  m_Name: "L4\u9AB7\u9AC5\u82F9\u679C Variant"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 09ca24d1f04ad9e4b8e0fdf50c5bf070, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49c0baf5785d3c3429aa6d229dae46eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -133,6 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d94cda41b423f499609b5102967073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  word: "\u667A\u6167"
-  itemName: "\u51B0\u971C\u6C34\u6676"
-  itemDesc: "\u6765\u81EA\u5317\u6781\u51B0\u5DDD\u7684\u6C34\u6676\uFF0C\u7528\u4E8E\u5236\u4F5C\u5177\u6709\u51B0\u51BB\u6548\u679C\u7684\u836F\u6C34\u3002"
+  word: "\u77F3\u5934"
+  itemName: "\u9AB7\u9AC5\u82F9\u679C"
+  itemDesc: "\u751F\u957F\u5728\u9B54\u6CD5\u68EE\u6797\u6DF1\u5904\u9AB7\u9AC5\u6811\u7684\u679C\u5B9E\uFF0C\u8FDC\u770B\u5982\u540C\u666E\u901A\u7684\u82F9\u679C\uFF0C\u4F46\u8868\u76AE\u4E0A\u9576\u5D4C\u7740\u5FAE\u5FAE\u53D1\u5149\u7684\u7D2B\u9ED1\u8272\u7B26\u6587\u3002\u5F53\u8FD9\u4E9B\u82F9\u679C\u6210\u719F\u65F6\uFF0C\u679C\u5B9E\u4E0A\u4F1A\u663E\u9732\u51FA\u4E00\u4E2A\u5FAE\u7B11\u7684\u9AB7\u9AC5\u9762\u5B54"
