@@ -114,22 +114,24 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 		return customer;
 	}
 
-	private void ClearCurrentLevel() {
+	public void ClearMatsAndPotions() {
 		pot.ClearMaterial();
-		if (curCustomer != null)
-			Destroy(curCustomer.gameObject);
-		curCustomer = null;
-
 		List<GameObject> pendingDelete = new List<GameObject>();
 		foreach (var mat in DragItem.allDragItems) {
 			if (mat is PotionMaterial || mat is Bottle) {
 				pendingDelete.Add(mat.gameObject);
 			}
 		}
-
 		foreach (var mat in pendingDelete) {
 			Destroy(mat.gameObject);
 		}
+	}
+
+	private void ClearCurrentLevel() {
+		ClearMatsAndPotions();
+		if (curCustomer != null)
+			Destroy(curCustomer.gameObject);
+		curCustomer = null;
 	}
 
 	private Customer CreateCurrentCustom() {
@@ -208,7 +210,7 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 	public void RegisterAchievements() {
 		foreach (var item in curCustomer.achievements) {
 			Achievement achievement = Instantiate(item).GetComponent<Achievement>();
-			EasyEvent.RegisterOnceCallback(string.Format("Achievement[{0}]", achievement.achieveName), achievement.UnlockAchievement);
+			EasyEvent.RegisterCallback(string.Format("Achievement[{0}]", achievement.achieveName), achievement.UnlockAchievement);
 		}
 	}
 

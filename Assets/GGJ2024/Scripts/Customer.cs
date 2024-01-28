@@ -92,6 +92,7 @@ public class Customer : SlotItem
 		(GetComponent<DialogueTreeController>().blackboard as Blackboard).AddVariable<string>("branchName", branchName);
 
 		Destroy(item.gameObject);
+		GGJGameMgr.Instance.ClearMatsAndPotions();
 
 		EasyEvent.TriggerEvent("PotionFinish");
 	}
