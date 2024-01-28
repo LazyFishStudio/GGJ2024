@@ -16,10 +16,17 @@ public class Achievement : MonoBehaviour
     public float stopTime = 0.5f;
     public float moveTime = 0.5f;
 
+    private Transform childSprite;
+    private void OnDestory() {
+        if (childSprite != null)
+            Destroy(childSprite.gameObject);
+	}
+
     public void UnlockAchievement() {
         Transform achievement = Instantiate(achievePrefab).transform;
         achievement.GetComponent<SpriteRenderer>().sprite = achieveSprite;
         achievement.localScale = Vector3.one * achieveStartScale;
+        childSprite = achievement;
 
         achievement.DOScale(Vector3.one * achieveBiggScale, scaleTime).OnComplete(() => {
             achievement.DOScale(Vector3.one * achieveBiggScale, stopTime).OnComplete(() => {

@@ -26,7 +26,6 @@ public class Customer : SlotItem
 
 		int length = targetSentences.Count;
 		for (int idx = 0; idx < length; idx++) {
-			Debug.Log("[" + targetSentences[idx] + "] : " + targetBranchName[idx]);
 			branchDict[targetSentences[idx]] = targetBranchName[idx];
 		}
 
@@ -36,7 +35,6 @@ public class Customer : SlotItem
 	}
 
 	private string GetBranchName(string sentence) {
-		Debug.Log("[" + sentence + "]");
 		if (branchDict.TryGetValue(sentence, out string result)) {
 			return result;
 		}
