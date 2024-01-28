@@ -192,19 +192,19 @@ MonoBehaviour:
   - {fileID: 6662557022277626614, guid: 80722bd40ae7bc74db7f00afb3d95305, type: 3}
   - {fileID: 2951205885017541454, guid: e05f4c66e7b27234db52710d81035c91, type: 3}
   achievements:
-  - {fileID: 683437645757316494, guid: 2a7e0bfe11d91dc4084a592966831e13, type: 3}
-  - {fileID: 683437645757316494, guid: c4dc799d61b8568469a1b141204189fc, type: 3}
+  - {fileID: 683437645757316494, guid: 690733adb5c57f744b47323095e02ccf, type: 3}
+  - {fileID: 683437645757316494, guid: c83ecf9f209013c41b5569e5ebe1d5dd, type: 3}
   defaultBranchName: Failed
   targetSentences:
-  - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
   - "\u6CB8\u7F8A\u7F8A \u7684 \u5FE0\u8BDA "
+  - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
   targetBranchName:
   - A
   - B
   characterSprites:
-  - {fileID: 21300000, guid: 23075eacf1e0e5b488e77d162c356703, type: 3}
-  - {fileID: 21300000, guid: 455d8485294db864d9521b6b1dab5b60, type: 3}
-  - {fileID: 21300000, guid: 464333b533dbf264c907482f5eab5795, type: 3}
+  - {fileID: 21300000, guid: 672170f1825b2ad4e83b0de6aba63500, type: 3}
+  - {fileID: 21300000, guid: e08a247fdad722a4cbc5a1e31d661ee8, type: 3}
+  - {fileID: 21300000, guid: 1989195726b01f9479b0cbeb080d3337, type: 3}
 --- !u!1 &8670351827681264710
 GameObject:
   m_ObjectHideFlags: 0

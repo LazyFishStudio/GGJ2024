@@ -147,7 +147,7 @@ MonoBehaviour:
   _lockBoundGraphPrefabOverrides: 1
   _preInitializeSubGraphs: 0
   _updateMode: 0
-  _graph: {fileID: 11400000, guid: 28c4e66007440004aa7d305a0a4f77d0, type: 2}
+  _graph: {fileID: 0}
   _blackboard: {fileID: 4813111044938039488}
 --- !u!114 &4813111044938039488
 MonoBehaviour:
@@ -191,13 +191,18 @@ MonoBehaviour:
   - {fileID: 8128272016369098764, guid: 3982647fef761074589de9f03fd8dfd9, type: 3}
   - {fileID: 6662557022277626614, guid: 80722bd40ae7bc74db7f00afb3d95305, type: 3}
   - {fileID: 2951205885017541454, guid: e05f4c66e7b27234db52710d81035c91, type: 3}
+  achievements: []
   defaultBranchName: Failed
   targetSentences:
-  - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
-  - "\u6CB8\u7F8A\u7F8A \u7684 \u5FE0\u8BDA "
+  - "\u827E\u8299\u6797\u5A1C \u53D8\u6210 \u5927\u957F\u817F"
+  - "\u827E\u8299\u6797\u5A1C \u53D8\u6210 \u9EC4\u91D1\u6BD4\u4F8B"
   targetBranchName:
   - A
-  - C
+  - B
+  characterSprites:
+  - {fileID: 21300000, guid: 3bae2f3ee4ef50842899683fba50ab9b, type: 3}
+  - {fileID: 21300000, guid: aac7c14a5204cec4da06225e0f0f3324, type: 3}
+  - {fileID: 21300000, guid: 455d8485294db864d9521b6b1dab5b60, type: 3}
 --- !u!1 &8670351827681264710
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,8 +273,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 362510889
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
