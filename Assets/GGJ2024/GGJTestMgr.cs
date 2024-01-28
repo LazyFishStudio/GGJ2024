@@ -13,6 +13,7 @@ public class GGJTestMgr : SingletonMono<GGJTestMgr>
     public DialogueActorAsset testActor;
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(GGJTestMgr))] // 将YourComponent替换为你的脚本名称
 public class GGJTestMgrEditor : Editor
 {
@@ -49,3 +50,4 @@ public class GGJTestMgrEditor : Editor
         }
     }
 }
+#endif

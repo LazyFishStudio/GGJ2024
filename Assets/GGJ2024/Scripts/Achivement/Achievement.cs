@@ -52,6 +52,7 @@ public class Achievement : MonoBehaviour
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(Achievement))]
 public class AchievementEditor : Editor
 {
@@ -69,4 +70,4 @@ public class AchievementEditor : Editor
         }
     }
 }
-
+#endif

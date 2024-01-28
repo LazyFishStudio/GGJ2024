@@ -59,6 +59,7 @@ public class PotionCauldron : SlotItem {
     }
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(PotionCauldron))]
 public class PotionCauldronEditor : Editor {
 
@@ -78,3 +79,4 @@ public class PotionCauldronEditor : Editor {
         }
     }
 }
+#endif
