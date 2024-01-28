@@ -8,13 +8,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2669536403431361428, guid: c58057320e1c3244aa4062057615da81, type: 3}
-      propertyPath: achieveName
-      value: "\u6211\u539F\u8C05\u4F60"
-      objectReference: {fileID: 0}
     - target: {fileID: 6622360565526945340, guid: c58057320e1c3244aa4062057615da81, type: 3}
       propertyPath: m_Name
-      value: L1A
+      value: "\u522B\u52A8\u8FD9\u4E2A Variant"
       objectReference: {fileID: 0}
     - target: {fileID: 7322378596784583166, guid: c58057320e1c3244aa4062057615da81, type: 3}
       propertyPath: m_LocalPosition.x
