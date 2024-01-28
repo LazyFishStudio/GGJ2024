@@ -22,6 +22,7 @@ public class SpoonAnim : MonoBehaviour
             if (moveTimeCount >= moveTime) {
                 isMoving = false;
                 GameObject.Instantiate(expPrefab, transform.parent.position, Quaternion.identity);
+                EasyEvent.TriggerEvent("SpoonAnimFinish");
             }
             moveProcess = Mathf.Clamp01(moveTimeCount / moveTime);
             stirRoundProcess = (stirRoundProcess + stirSpeed * Time.deltaTime * moveProcess) % 1.0f;

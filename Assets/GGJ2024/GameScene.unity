@@ -3358,6 +3358,7 @@ MonoBehaviour:
   onHover: 0
   potionPrefab: {fileID: 4420858372570194773, guid: a3ddad32ef7475e4a9e5f8bb3d0b94b6, type: 3}
   productBias: {x: 0, y: 2, z: 0}
+  spoonAnim: {fileID: 2064116540}
 --- !u!1 &1714098230
 GameObject:
   m_ObjectHideFlags: 0

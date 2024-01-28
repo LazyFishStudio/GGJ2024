@@ -35,6 +35,7 @@ public class PotionCauldron : SlotItem {
 
     public void ClearMaterial() {
         sentence = "";
+        textMesh.text = "";
         matList.Clear();
         water.color = waterColor;
     }
