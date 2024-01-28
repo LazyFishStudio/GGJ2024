@@ -37,7 +37,7 @@ public class PotionCauldron : SlotItem {
         sentence = "";
         textMesh.text = "";
         matList.Clear();
-        water.color = waterColor;
+        // water.color = waterColor;
     }
 
     public override bool CheckAcceptDragItem(DragItem item) {
