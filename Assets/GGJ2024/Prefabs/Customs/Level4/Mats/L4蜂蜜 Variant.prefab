@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d94cda41b423f499609b5102967073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  word: "\u5FE0\u8BDA"
+  word: "\u76D4\u7532"
   itemName: "\u9F99\u8721\u8702\u871C"
   itemDesc: "\u4ECE\u751F\u6D3B\u5728\u706B\u5C71\u4E2D\u7684\u9F99\u8721\u8702\u5DE2\u4E2D\u91C7\u96C6\u7684\u7A00\u6709\u8702\u871C\uFF0C\u662F\u5236\u4F5C\u706B\u7130\u7C7B\u836F\u6C34\u7684\u5FC5\u5907\u6210\u5206\u3002"
 --- !u!1 &4433699924896189518
