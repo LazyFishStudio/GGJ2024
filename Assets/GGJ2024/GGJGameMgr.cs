@@ -6,6 +6,7 @@ using NodeCanvas.DialogueTrees;
 using System.Linq;
 using Bros.UI2D;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 流程：
@@ -42,6 +43,8 @@ public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 	private void Update() {
 		if (Input.GetKey(KeyCode.Escape))
 			Application.Quit();
+		if (Input.GetKey(KeyCode.R))
+			SceneManager.LoadScene(0);
 	}
 
 	public enum GameFlowState {
