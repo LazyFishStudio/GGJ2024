@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2461209747608214082}
   - component: {fileID: 6724010209555387521}
-  - component: {fileID: 2005732811436878575}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
@@ -85,27 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2005732811436878575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436017062916624715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b8e0142d8c2ecf418f2c504f65beac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placeholder: {fileID: 0}
-  achievePrefab: {fileID: 0}
-  achieveSprite: {fileID: 0}
-  achieveStartScale: 0
-  achieveBiggScale: 0
-  achieveNormalScale: 0
-  scaleTime: 0.5
-  stopTime: 0.5
-  moveTime: 0.5
 --- !u!1 &6622360565526945340
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8e0142d8c2ecf418f2c504f65beac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achieveName: 
   placeholder: {fileID: 436017062916624715}
   achievePrefab: {fileID: 9036121821967683022, guid: 6a1083f68b6007b418da704ca4a221f0, type: 3}
   achieveSprite: {fileID: 21300000, guid: ae1dbce90832f5141b11aaa4f7043060, type: 3}
