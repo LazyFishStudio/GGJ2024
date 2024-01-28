@@ -21,7 +21,8 @@ public class SpoonAnim : MonoBehaviour
             moveTimeCount += Time.deltaTime;
             if (moveTimeCount >= moveTime) {
                 isMoving = false;
-                GameObject.Instantiate(expPrefab, transform.parent.position, Quaternion.identity);
+                GameObject.Instantiate(expPrefab, transform.parent.position, Quaternion.identity).GetComponentInChildren<SpriteRenderer>().color = GGJGameMgr.Instance.pot.water.color;;
+
                 EasyEvent.TriggerEvent("SpoonAnimFinish");
             }
             moveProcess = Mathf.Clamp01(moveTimeCount / moveTime);
