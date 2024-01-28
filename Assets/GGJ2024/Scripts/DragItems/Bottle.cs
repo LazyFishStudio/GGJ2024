@@ -6,6 +6,7 @@ using TMPro;
 public class Bottle : DragItem
 {
     public string result = "";
+	public SpriteRenderer water;
 
 	public override void OnHoverEnter() {
 		transform.localScale *= 1.1f;

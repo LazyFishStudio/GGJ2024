@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PotionCauldron : SlotItem {
     public TextMeshProUGUI textMesh;
@@ -12,6 +13,12 @@ public class PotionCauldron : SlotItem {
 	public int maxMatNum = 3; 
     [HideInInspector]
     public PotionMaterial testMat;
+    public Color waterColor;
+    public SpriteRenderer water;
+
+    private void Awake() {
+        textMesh.text = "";
+    }
 
 	public void AddMaterial(PotionMaterial mat) {
 		if (matList == null) {
@@ -22,11 +29,14 @@ public class PotionCauldron : SlotItem {
 		}
 		sentence = sentence + mat.word + " ";
 		matList.Add(mat);
+        textMesh.text = "<wave>" + sentence + "</wave>";
+        water.color = Color.HSVToRGB(Random.Range(0, 1.0f), 1.0f, 1.0f);
 	}
 
     public void ClearMaterial() {
         sentence = "";
         matList.Clear();
+        water.color = waterColor;
     }
 
     public override bool CheckAcceptDragItem(DragItem item) {
@@ -44,7 +54,7 @@ public class PotionCauldron : SlotItem {
     }
 
     private void Update() {
-        textMesh.text = sentence;
+        
     }
 }
 

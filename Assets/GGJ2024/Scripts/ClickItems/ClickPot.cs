@@ -14,6 +14,7 @@ public class ClickPot : ClickItem
 	public override void OnClick() {
 		Bottle bottle = Instantiate(potionPrefab, transform.position + productBias, Quaternion.identity, null).GetComponent<Bottle>();
 		bottle.result = GetComponent<PotionCauldron>().sentence;
+		bottle.water.color = GetComponent<PotionCauldron>().water.color;
 		GetComponent<PotionCauldron>().ClearMaterial();
 	}
 }
