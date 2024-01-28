@@ -40,6 +40,7 @@ public class Achievement : MonoBehaviour
                     });
                 });
             });
+            SendMessage("Play");
         } else {
             transform.DOMove(transform.position, 0.05f).OnComplete(() => {
                 EasyEvent.TriggerEvent("AchievementFinish");

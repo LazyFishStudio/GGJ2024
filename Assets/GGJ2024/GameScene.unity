@@ -2377,6 +2377,8 @@ GameObject:
   - component: {fileID: 906509462}
   - component: {fileID: 906509463}
   - component: {fileID: 906509464}
+  - component: {fileID: 906509465}
+  - component: {fileID: 906509466}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2445,6 +2447,68 @@ MonoBehaviour:
   controller: {fileID: 0}
   testDialogueTree: {fileID: 11400000, guid: 7109efec0f5cc8d409b88cd89a907fc0, type: 2}
   testActor: {fileID: 11400000, guid: 243e4060e11f3e345be3e5579929c016, type: 2}
+--- !u!114 &906509465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906509461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -2059677602
+      Data2: 1231554668
+      Data3: -1722552694
+      Data4: -1239067189
+    Path: event:/GGJBGM
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &906509466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906509461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1731419893
+      Data2: 1113346673
+      Data3: 977012624
+      Data4: -1925679649
+    Path: event:/GGJLevelFinish
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1022224313
 GameObject:
   m_ObjectHideFlags: 0
