@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &117140324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3266,6 +3266,9 @@ GameObject:
   - component: {fileID: 1662684533}
   - component: {fileID: 1662684532}
   - component: {fileID: 1662684534}
+  - component: {fileID: 1662684535}
+  - component: {fileID: 1662684537}
+  - component: {fileID: 1662684536}
   m_Layer: 0
   m_Name: "\u95051 (1)"
   m_TagString: Untagged
@@ -3308,6 +3311,7 @@ MonoBehaviour:
   testMat: {fileID: 0}
   waterColor: {r: 0.5882353, g: 0.92156863, b: 1, a: 1}
   water: {fileID: 445486247}
+  popEmitter: {fileID: 1662684535}
 --- !u!58 &1662684533
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3359,6 +3363,101 @@ MonoBehaviour:
   potionPrefab: {fileID: 4420858372570194773, guid: a3ddad32ef7475e4a9e5f8bb3d0b94b6, type: 3}
   productBias: {x: 0, y: 2, z: 0}
   spoonAnim: {fileID: 2064116540}
+  makingEmitter: {fileID: 1662684536}
+  expEmitter: {fileID: 1662684537}
+--- !u!114 &1662684535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662684528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -878089522
+      Data2: 1146857938
+      Data3: -1524658803
+      Data4: -1451620975
+    Path: event:/BImpact-FishJump-GGJ24
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 60
+--- !u!114 &1662684536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662684528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1333513588
+      Data2: 1194455288
+      Data3: -1120041543
+      Data4: 2068155839
+    Path: event:/BImpact-FishStruggle-GGj24
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 60
+--- !u!114 &1662684537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662684528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2043669732
+      Data2: 1207505820
+      Data3: 479312001
+      Data4: -1275874055
+    Path: event:/superfart
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1714098230
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,7 +4286,19 @@ MonoBehaviour:
       m_Calls: []
   onCharacterVisible:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9132507384274546594}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onMessage:
     m_PersistentCalls:
       m_Calls: []
@@ -4290,6 +4401,7 @@ GameObject:
   - component: {fileID: 9132507384274546593}
   - component: {fileID: 1690211287967043496}
   - component: {fileID: 5884323846044432893}
+  - component: {fileID: 9132507384274546594}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -4673,6 +4785,37 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9132507384274546594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287865092633331086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -802794390
+      Data2: 1226431917
+      Data3: -1904550729
+      Data4: 480338645
+    Path: event:/Talking/Talking-Bea
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 60
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
