@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 968a5c6a9e8b4eb459dfde6ac8792eee, type: 3}
     - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: word
-      value: "\u5FE0\u8BDA"
+      value: "\u7075\u6027"
       objectReference: {fileID: 0}
     - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: itemDesc

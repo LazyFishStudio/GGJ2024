@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d71fb7c52372e244baf2e69a9d0d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: "\u6CB8\u7F8A\u7F8A"
+  _name: "\u5377\u6BDB"
   _portrait: {fileID: 0}
   _dialogueColor: {r: 1, g: 1, b: 1, a: 1}
   _dialogueOffset: {x: 0, y: 0, z: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
   _lockBoundGraphPrefabOverrides: 1
   _preInitializeSubGraphs: 0
   _updateMode: 0
-  _graph: {fileID: 11400000, guid: 28c4e66007440004aa7d305a0a4f77d0, type: 2}
+  _graph: {fileID: 11400000, guid: 3a874d887fbdbd74192579f4dbf8c37a, type: 2}
   _blackboard: {fileID: 4813111044938039488}
 --- !u!114 &4813111044938039488
 MonoBehaviour:
@@ -186,18 +186,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mats:
-  - {fileID: 6017750568918814708, guid: d71d570e4a1b5484482f791dce23b50a, type: 3}
-  - {fileID: 797710091143399544, guid: 760a9f319c9be5041a81318e7b12c9ec, type: 3}
-  - {fileID: 8128272016369098764, guid: 3982647fef761074589de9f03fd8dfd9, type: 3}
-  - {fileID: 6662557022277626614, guid: 80722bd40ae7bc74db7f00afb3d95305, type: 3}
-  - {fileID: 2951205885017541454, guid: e05f4c66e7b27234db52710d81035c91, type: 3}
+  - {fileID: 6017750568918814708, guid: ba68d1d1ef1ed6947b8a62feb2198414, type: 3}
+  - {fileID: 797710091143399544, guid: 9a017f5bf81226b4eba8572a39e2da55, type: 3}
+  - {fileID: 8128272016369098764, guid: c3d2f84a0a8374346ac4038ed36ce89e, type: 3}
+  - {fileID: 6662557022277626614, guid: aa1005a750e6707469660ceb47d9f1fd, type: 3}
+  - {fileID: 2951205885017541454, guid: d436718c159daef4092d3c042f325909, type: 3}
+  achievements: []
   defaultBranchName: Failed
   targetSentences:
-  - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
-  - "\u6CB8\u7F8A\u7F8A \u7684 \u5FE0\u8BDA "
+  - "\u614C\u4E71 \u7684 \u6D17\u526A\u5439"
+  - "\u7075\u6027 \u7684 Tony"
   targetBranchName:
   - A
-  - C
+  - B
+  characterSprites:
+  - {fileID: 21300000, guid: 23075eacf1e0e5b488e77d162c356703, type: 3}
+  - {fileID: 21300000, guid: e538fd4a212f908489efde20cc298801, type: 3}
+  - {fileID: 21300000, guid: 464333b533dbf264c907482f5eab5795, type: 3}
 --- !u!1 &8670351827681264710
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +230,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2762, y: 3.6434, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4258892708102787255}
@@ -268,8 +273,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 362510889
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

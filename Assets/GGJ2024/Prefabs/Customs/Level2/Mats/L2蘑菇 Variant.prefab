@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 3f53f3e389d8ad740931eb3a629523a8, type: 3}
     - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: word
-      value: "\u6CB8\u7F8A\u7F8A"
+      value: Tony
       objectReference: {fileID: 0}
     - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: itemDesc

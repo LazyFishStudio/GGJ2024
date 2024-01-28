@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d71fb7c52372e244baf2e69a9d0d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: "\u6CB8\u7F8A\u7F8A"
-  _portrait: {fileID: 0}
+  _name: "\u5251\u58EB-\u6885\u5C14\u82AC\xB7\u5F71Melfin Shadow"
+  _portrait: {fileID: 2800000, guid: 8103e498f39ec464caabbcdc3cb83152, type: 3}
   _dialogueColor: {r: 1, g: 1, b: 1, a: 1}
   _dialogueOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &5762461272231533791
@@ -147,7 +147,7 @@ MonoBehaviour:
   _lockBoundGraphPrefabOverrides: 1
   _preInitializeSubGraphs: 0
   _updateMode: 0
-  _graph: {fileID: 11400000, guid: 28c4e66007440004aa7d305a0a4f77d0, type: 2}
+  _graph: {fileID: 0}
   _blackboard: {fileID: 4813111044938039488}
 --- !u!114 &4813111044938039488
 MonoBehaviour:
@@ -191,13 +191,18 @@ MonoBehaviour:
   - {fileID: 8128272016369098764, guid: 3982647fef761074589de9f03fd8dfd9, type: 3}
   - {fileID: 6662557022277626614, guid: 80722bd40ae7bc74db7f00afb3d95305, type: 3}
   - {fileID: 2951205885017541454, guid: e05f4c66e7b27234db52710d81035c91, type: 3}
+  achievements: []
   defaultBranchName: Failed
   targetSentences:
-  - "\u559C\u7F8A\u7F8A \u7684 \u667A\u6167 "
-  - "\u6CB8\u7F8A\u7F8A \u7684 \u5FE0\u8BDA "
+  - "\u83B7\u5F97 \u77F3\u5934 \u7684 \u7075\u9B42"
+  - "\u83B7\u5F97 \u52C7\u58EB \u7684 \u76D4\u7532"
   targetBranchName:
   - A
-  - C
+  - B
+  characterSprites:
+  - {fileID: 21300000, guid: 0b0f60df6cbef0949be32e61c52a52f6, type: 3}
+  - {fileID: 21300000, guid: 506f14362a187884c8f5cb04dc925369, type: 3}
+  - {fileID: 21300000, guid: 8103e498f39ec464caabbcdc3cb83152, type: 3}
 --- !u!1 &8670351827681264710
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,8 +273,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 362510889
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

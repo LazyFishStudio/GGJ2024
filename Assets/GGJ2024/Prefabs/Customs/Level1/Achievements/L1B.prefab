@@ -8,10 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2461209747608214082, guid: c58057320e1c3244aa4062057615da81, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2669536403431361428, guid: c58057320e1c3244aa4062057615da81, type: 3}
       propertyPath: achieveName
-      value: "\u5C0F\u4E11"
+      value: L1B
       objectReference: {fileID: 0}
+    - target: {fileID: 2669536403431361428, guid: c58057320e1c3244aa4062057615da81, type: 3}
+      propertyPath: achieveSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9b022f659cbc71479119bfa64822864, type: 3}
     - target: {fileID: 6622360565526945340, guid: c58057320e1c3244aa4062057615da81, type: 3}
       propertyPath: m_Name
       value: L1B
@@ -22,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8f71e719b8a2e3c4aadfd33c8fed0d75, type: 3}
     - target: {fileID: 7322378596784583166, guid: c58057320e1c3244aa4062057615da81, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7322378596784583166, guid: c58057320e1c3244aa4062057615da81, type: 3}
       propertyPath: m_LocalPosition.y

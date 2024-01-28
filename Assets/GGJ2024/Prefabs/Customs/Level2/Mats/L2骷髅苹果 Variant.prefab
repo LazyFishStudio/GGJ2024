@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 49c0baf5785d3c3429aa6d229dae46eb, type: 3}
     - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: word
-      value: "\u667A\u6167"
+      value: "\u6D17\u526A\u5439"
       objectReference: {fileID: 0}
     - target: {fileID: 5918446245694339988, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: itemDesc
