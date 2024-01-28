@@ -96,10 +96,10 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/FootStep.strings.bank
   Name: FootStep.strings
   StudioPath: bank:/FootStep.strings
-  lastModified: 638420434458202903
+  lastModified: 638420444390029752
   FileSizes:
   - Name: Desktop
-    Value: 2574
+    Value: 2612
   Exists: 1
 --- !u!114 &-5997184389244650355
 MonoBehaviour:
@@ -445,7 +445,7 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/FootStep.bank
   Name: FootStep
   StudioPath: bank:/FootStep
-  lastModified: 638420434458037910
+  lastModified: 638420444389999832
   FileSizes:
   - Name: Desktop
     Value: 97408
@@ -492,10 +492,10 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638420426258980009
+  lastModified: 638420444853419469
   FileSizes:
   - Name: Desktop
-    Value: 2398720
+    Value: 4535680
   Exists: 1
 --- !u!114 &-337734950139945042
 MonoBehaviour:
@@ -571,12 +571,13 @@ MonoBehaviour:
   - {fileID: -892768173580193211}
   - {fileID: -8944618517334983400}
   - {fileID: -7015852127178999041}
+  - {fileID: 1272389543443777200}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2544210241545578906}
   StringsBanks:
   - {fileID: -6231639127751259369}
-  cacheTime: 638420436659145433
+  cacheTime: 638420444853419469
   cacheVersion: 131607
 --- !u!114 &718491770015277607
 MonoBehaviour:
@@ -632,6 +633,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 906
+--- !u!114 &1272389543443777200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GGJBGM
+  m_EditorClassIdentifier: 
+  Path: event:/GGJBGM
+  Guid:
+    Data1: -2059677602
+    Data2: 1231554668
+    Data3: -1722552694
+    Data4: -1239067189
+  Banks:
+  - {fileID: -796590778810704839}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 158500
 --- !u!114 &1506409772935752460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,10 +803,10 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/Impact.bank
   Name: Impact
   StudioPath: bank:/Impact
-  lastModified: 638420436659145433
+  lastModified: 638420442911420559
   FileSizes:
   - Name: Desktop
-    Value: 297632
+    Value: 297952
   Exists: 1
 --- !u!114 &5503958145903582012
 MonoBehaviour:
