@@ -136,10 +136,11 @@ MonoBehaviour:
   achieveSprite: {fileID: 21300000, guid: ae1dbce90832f5141b11aaa4f7043060, type: 3}
   achieveStartScale: 0
   achieveBiggScale: 0.4
-  achieveNormalScale: 0.15
-  scaleTime: 0.5
-  stopTime: 0.5
+  achieveNormalScale: 0.16
+  scaleTime: 1
+  stopTime: 2
   moveTime: 0.5
+  childSprite: {fileID: 0}
 --- !u!114 &7421573752200707267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,4 +171,4 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  OverrideMaxDistance: 60

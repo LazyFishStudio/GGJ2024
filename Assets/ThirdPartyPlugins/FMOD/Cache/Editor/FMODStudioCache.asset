@@ -54,33 +54,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 60
   Length: 0
---- !u!114 &-7015852127178999041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/superfart
-  m_EditorClassIdentifier: 
-  Path: event:/superfart
-  Guid:
-    Data1: 2043669732
-    Data2: 1207505820
-    Data3: 479312001
-    Data4: -1275874055
-  Banks:
-  - {fileID: 5298852119292625546}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1560
 --- !u!114 &-6231639127751259369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,10 +69,10 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/FootStep.strings.bank
   Name: FootStep.strings
   StudioPath: bank:/FootStep.strings
-  lastModified: 638420458333373469
+  lastModified: 638420484056319808
   FileSizes:
   - Name: Desktop
-    Value: 2666
+    Value: 2676
   Exists: 1
 --- !u!114 &-5997184389244650355
 MonoBehaviour:
@@ -430,6 +403,33 @@ MonoBehaviour:
   - FishBite
   - FishOutOfWater
   Exists: 1
+--- !u!114 &-2772315286427265690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RandomMemeExplosion
+  m_EditorClassIdentifier: 
+  Path: event:/RandomMemeExplosion
+  Guid:
+    Data1: 2043669732
+    Data2: 1207505820
+    Data3: 479312001
+    Data4: -1275874055
+  Banks:
+  - {fileID: 5298852119292625546}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4040
 --- !u!114 &-2544210241545578906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/FootStep.bank
   Name: FootStep
   StudioPath: bank:/FootStep
-  lastModified: 638420458333283718
+  lastModified: 638420484056147972
   FileSizes:
   - Name: Desktop
     Value: 97408
@@ -492,7 +492,7 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638420458332246163
+  lastModified: 638420476462012342
   FileSizes:
   - Name: Desktop
     Value: 4581216
@@ -570,15 +570,15 @@ MonoBehaviour:
   - {fileID: -3967708595068193536}
   - {fileID: -892768173580193211}
   - {fileID: -8944618517334983400}
-  - {fileID: -7015852127178999041}
   - {fileID: 1272389543443777200}
   - {fileID: 3947681252336086641}
+  - {fileID: -2772315286427265690}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2544210241545578906}
   StringsBanks:
   - {fileID: -6231639127751259369}
-  cacheTime: 638420458333373469
+  cacheTime: 638420487460965624
   cacheVersion: 131607
 --- !u!114 &718491770015277607
 MonoBehaviour:
@@ -659,7 +659,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 158500
 --- !u!114 &1506409772935752460
 MonoBehaviour:
@@ -787,7 +787,7 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 60
   Length: 4063
 --- !u!114 &4632654312949607036
 MonoBehaviour:
@@ -831,10 +831,10 @@ MonoBehaviour:
   Path: Assets/PCDUtils/SamoozUtils/SamoozFMODProject/Build/Desktop/Impact.bank
   Name: Impact
   StudioPath: bank:/Impact
-  lastModified: 638420442911420559
+  lastModified: 638420487460965624
   FileSizes:
   - Name: Desktop
-    Value: 297952
+    Value: 304448
   Exists: 1
 --- !u!114 &5503958145903582012
 MonoBehaviour:
