@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class Achievement : MonoBehaviour
 {
+    public string achieveName;
+
     public GameObject placeholder;
     public GameObject achievePrefab;
     public Sprite achieveSprite;

@@ -25,7 +25,6 @@ public class Customer : SlotItem
 	}
 
 	private void Awake() {
-
         spriteRend = GetComponentInChildren<SpriteRenderer>();
         spriteRend.sprite = characterSprites[2];
 		branchDict = new Dictionary<string, string>();
@@ -34,10 +33,6 @@ public class Customer : SlotItem
 		for (int idx = 0; idx < length; idx++) {
 			branchDict[targetSentences[idx]] = targetBranchName[idx];
 		}
-
-		EasyEvent.RegisterOnceCallback("ShowMats", ShowMats);
-		EasyEvent.RegisterOnceCallback("NextLevel", () => { GGJGameMgr.Instance.NextLevel(); });
-		EasyEvent.RegisterOnceCallback("RestartLevel", () => { GGJGameMgr.Instance.RestartLevel(); });
 	}
 
 	private string GetBranchName(string sentence) {
@@ -54,15 +49,20 @@ public class Customer : SlotItem
 		GetComponent<DialogueTreeController>().StartDialogue(GetComponent<DialogueActor>());
 	}
 
-    private void Update() {
-        EasyEvent.RegisterCallback("EndingA", () => spriteRend.sprite = characterSprites[0]);
-        EasyEvent.RegisterCallback("EndingB", () => spriteRend.sprite = characterSprites[1]);
-        EasyEvent.RegisterCallback("EndingC", () => spriteRend.sprite = characterSprites[2]);
-    }
-
-	protected virtual void ShowMats() {
-		foreach (var mat in mats) {
-			Instantiate(mat);
+	public void HandleEndings(string endingName) {
+		switch (endingName) {
+			case "EndingA": {
+				spriteRend.sprite = characterSprites[0];
+				break;
+			}
+			case "EndingB": {
+				spriteRend.sprite = characterSprites[1];
+				break;
+			}
+			case "EndingC": {
+				spriteRend.sprite = characterSprites[2];
+				break;
+			}
 		}
 	}
 

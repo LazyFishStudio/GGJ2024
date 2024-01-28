@@ -17,7 +17,7 @@ using TMPro;
 ///     6.顾客离开
 ///     7.获取新顾客（下一关）
 /// </summary>
-public class GGJGameMgr : SingletonMono<GGJGameMgr>
+public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
 {
 	public Tooltip tooltip;
 	public PotionCauldron pot;
@@ -27,12 +27,13 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 	public Transform customerHandle;
 
 	private void Awake() {
-		customerIndex = -1;
 		InitGameFlowSM();
+		RegisterGameFlows();
 	}
 
 	private void Start() {
-		gameFlowSM.GotoState(GameFlowState.CustomerEnter);
+		customerIndex = -1;
+		HandleNextLevel();
 	}
 
 	public enum GameFlowState {
@@ -112,33 +113,94 @@ public class GGJGameMgr : SingletonMono<GGJGameMgr>
 	}
 
 	private void ClearCurrentLevel() {
-		Destroy(curCustomer.gameObject);
 		pot.ClearMaterial();
+		if (curCustomer != null)
+			Destroy(curCustomer.gameObject);
+		curCustomer = null;
 
-		List<PotionMaterial> pendingDelete = new List<PotionMaterial>();
+		List<GameObject> pendingDelete = new List<GameObject>();
 		foreach (var mat in DragItem.allDragItems) {
-			if (mat is PotionMaterial) {
-				pendingDelete.Add(mat as PotionMaterial);
+			if (mat is PotionMaterial || mat is Bottle) {
+				pendingDelete.Add(mat.gameObject);
 			}
 		}
 
 		foreach (var mat in pendingDelete) {
 			Destroy(mat.gameObject);
 		}
-
 	}
 
-	public void NextLevel() {
-		ClearCurrentLevel();
-
-		curCustomer = CreateAndGetNextCustomer();
-	}
-
-	public void RestartLevel() {
-		ClearCurrentLevel();
-
+	private Customer CreateCurrentCustom() {
 		GameObject customerObj = GameObject.Instantiate(customerPrefabs[customerIndex], customerHandle.position, Quaternion.identity, customerHandle);
-		curCustomer = customerObj.GetComponent<Customer>();
+		return customerObj.GetComponent<Customer>();
 	}
 }
 
+public partial class GGJGameMgr : SingletonMono<GGJGameMgr>
+{
+	private void RegisterGameFlows() {
+		EasyEvent.RegisterCallback("NextLevel", HandleNextLevel);
+		EasyEvent.RegisterCallback("RestartLevel", HandleRestartLevel);
+		EasyEvent.RegisterCallback("GameFinish", HandleGameFinish);
+		EasyEvent.RegisterCallback("ShowMats", HandleShowMats);
+		EasyEvent.RegisterCallback("EndingA", HandleEndingA);
+		EasyEvent.RegisterCallback("EndingA", HandleEndingB);
+		EasyEvent.RegisterCallback("EndingA", HandleEndingC);
+	}
+
+	public void HandlePause() {
+
+	}
+
+	public void HandleGameFinish() {
+
+	}
+
+	public void HandleExitGame() {
+		Application.Quit();
+	}
+
+	public void HandleNextLevel() {
+		ClearCurrentLevel();
+		ClearAchievements();
+
+		customerIndex++;
+		curCustomer = CreateCurrentCustom();
+		RegisterAchievements();
+	}
+
+	public void HandleRestartLevel() {
+		ClearCurrentLevel();
+
+		curCustomer = CreateCurrentCustom();
+	}
+
+	public void HandleShowMats() {
+		foreach (var mat in curCustomer.mats) {
+			Instantiate(mat);
+		}
+	}
+
+	public void HandleEndingA() {
+		curCustomer.HandleEndings("EndingA");
+	}
+	public void HandleEndingB() {
+		curCustomer.HandleEndings("EndingB");
+	}
+	public void HandleEndingC() {
+		curCustomer.HandleEndings("EndingC");
+	}
+
+	public void RegisterAchievements() {
+		foreach (var item in curCustomer.achievements) {
+			Achievement achievement = Instantiate(item).GetComponent<Achievement>();
+			EasyEvent.RegisterOnceCallback(string.Format("Achievement[{0}]", achievement.achieveName), achievement.UnlockAchievement);
+		}
+	}
+
+	public void ClearAchievements() {
+		foreach (var achievement in FindObjectsOfType<Achievement>()) {
+			Destroy(achievement.gameObject);
+		}
+	}
+}
