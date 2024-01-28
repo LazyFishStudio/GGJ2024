@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d71fb7c52372e244baf2e69a9d0d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: "\u4EBA\u9C7C-\u827E\u8299\u6797\u5A1C"
+  _name: "\u4EBA\u9C7C-\u827E\u8299\u6797\u5A1CEvelina"
   _portrait: {fileID: 0}
   _dialogueColor: {r: 1, g: 1, b: 1, a: 1}
   _dialogueOffset: {x: 0, y: 0, z: 0}
@@ -190,13 +190,14 @@ MonoBehaviour:
   - {fileID: 797710091143399544, guid: d778d492abafde64dad33d5e2029e032, type: 3}
   - {fileID: 8128272016369098764, guid: 7bd8f99cfd1418d4496f70b7c9b26ec5, type: 3}
   - {fileID: 6662557022277626614, guid: 4131410de34d85546a4595248bbfe844, type: 3}
+  - {fileID: 2951205885017541454, guid: 21ba88c1ae7045c41a73ce930457bc5a, type: 3}
   achievements:
   - {fileID: 683437645757316494, guid: 137845b5db6f84e4287206a37a33e4d2, type: 3}
   - {fileID: 683437645757316494, guid: 194a0eaee53d11543b3b2842a90c022d, type: 3}
   defaultBranchName: Failed
   targetSentences:
-  - "\u827E\u8299\u6797\u5A1C \u53D8\u6210 \u5927\u957F\u817F "
-  - "\u827E\u8299\u6797\u5A1C \u53D8\u6210 \u9EC4\u91D1\u6BD4\u4F8B "
+  - "\u9C7C \u957F\u51FA \u53CC\u817F "
+  - "\u9C7C \u53D8\u6210 \u4EBA\u7C7B "
   targetBranchName:
   - A
   - B

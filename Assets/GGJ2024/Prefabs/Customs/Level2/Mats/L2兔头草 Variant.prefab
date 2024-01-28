@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 948321337857442472, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: m_Name
-      value: "\u5154\u5934\u8349 Variant"
+      value: "L2\u5154\u5934\u8349 Variant"
       objectReference: {fileID: 0}
     - target: {fileID: 4569316382923473027, guid: 5dfe8e22eb50da141a375f0d035b3d50, type: 3}
       propertyPath: m_Radius

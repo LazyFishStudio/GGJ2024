@@ -133,6 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d94cda41b423f499609b5102967073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  word: "\u83B7\u5F97"
+  word: "\u8EAB\u4F53"
   itemName: "\u5E7B\u5E7D\u8548\u5B62"
   itemDesc: "\u5728\u6708\u5149\u4E0B\u751F\u957F\u7684\u5E7B\u5E7D\u8548\u7684\u5B62\u5B50\uFF0C\u662F\u5236\u4F5C\u5E7B\u672F\u7C7B\u836F\u6C34\u7684\u4E3B\u8981\u6210\u5206\u3002"

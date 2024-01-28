@@ -188,17 +188,15 @@ MonoBehaviour:
   mats:
   - {fileID: 6017750568918814708, guid: 17d9f1f7b607c5e439d18d7e0a10fede, type: 3}
   - {fileID: 2951205885017541454, guid: 54e627ab8da5d9141ad964156d403541, type: 3}
-  - {fileID: 797710091143399544, guid: 646491b65334eae41a9f92b3edbc1efd, type: 3}
-  - {fileID: 8128272016369098764, guid: 31b52fcb413bc1440a0c7940a7592ad5, type: 3}
-  - {fileID: 6662557022277626614, guid: 78855ce8d17fa3f46b592e97f6627967, type: 3}
   - {fileID: 2951205885017541454, guid: 60b6c33e6d3e49e45acb12100ad030a7, type: 3}
+  - {fileID: 8128272016369098764, guid: 31b52fcb413bc1440a0c7940a7592ad5, type: 3}
   achievements:
   - {fileID: 683437645757316494, guid: c4625b118fe0f2849b2ef446f4a41204, type: 3}
   - {fileID: 683437645757316494, guid: 5d04043014ae25f4b86e00b5f4857215, type: 3}
   defaultBranchName: Failed
   targetSentences:
-  - "\u83B7\u5F97 \u77F3\u5934 \u7684 \u7075\u9B42 "
-  - "\u83B7\u5F97 \u52C7\u58EB \u7684 \u76D4\u7532 "
+  - "\u65E0\u575A\u4E0D\u6467 \u7684 \u8EAB\u4F53"
+  - "\u65E0\u575A\u4E0D\u6467 \u7684 \u76D4\u7532"
   targetBranchName:
   - A
   - B

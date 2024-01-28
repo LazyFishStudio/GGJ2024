@@ -190,14 +190,13 @@ MonoBehaviour:
   - {fileID: 797710091143399544, guid: 9a017f5bf81226b4eba8572a39e2da55, type: 3}
   - {fileID: 8128272016369098764, guid: c3d2f84a0a8374346ac4038ed36ce89e, type: 3}
   - {fileID: 6662557022277626614, guid: aa1005a750e6707469660ceb47d9f1fd, type: 3}
-  - {fileID: 2951205885017541454, guid: d436718c159daef4092d3c042f325909, type: 3}
   achievements:
   - {fileID: 683437645757316494, guid: 6078673a2133cdf4faa46a2f60042037, type: 3}
   - {fileID: 683437645757316494, guid: 9dbea8b0df5777d4c8921ded015d7f32, type: 3}
   defaultBranchName: Failed
   targetSentences:
-  - "\u614C\u4E71 \u7684 \u6D17\u526A\u5439 "
-  - "\u7075\u6027 \u7684 Tony "
+  - "\u575A\u5F3A \u7684 \u5934\u53D1 "
+  - "\u4F38\u76F4 \u7684 \u5934\u53D1 "
   targetBranchName:
   - A
   - B
